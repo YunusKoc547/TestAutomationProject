@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-12-10T19:23:35 EST" name="Suite" finished-at="2022-12-10T19:24:00 EST" duration-ms="24226">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.CucumberRunner@5d0a1059]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2022-12-10T19:23:35 EST" name="Cucumber Test" finished-at="2022-12-10T19:24:00 EST" duration-ms="24226">
+      <class name="runners.CucumberRunner">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:runners.CucumberRunner@5d0a1059]" started-at="2022-12-10T19:23:35 EST" name="setUpClass" finished-at="2022-12-10T19:23:36 EST" duration-ms="224" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.CucumberRunner@5d0a1059]" started-at="2022-12-10T19:23:36 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-10T19:23:59 EST" duration-ms="23632" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Navigate to Application and login]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertTrue(Assert.java:45)
+at org.testng.Assert.assertTrue(Assert.java:55)
+at commonUtilities.GenericMethods.clickElement(GenericMethods.java:39)
+at pages.HomePage.clickOnAllDropdownButton1(HomePage.java:27)
+at stepdefinitions.Home_Stepdef.userClickOnHomeButton1(Home_Stepdef.java:32)
+at ✽.user click on home button1(file:///C:/Users/yunus/eclipse-AutomationProject/AutomationProject/src/test/java/features/login.feature:29)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.CucumberRunner@5d0a1059]" started-at="2022-12-10T19:23:59 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-10T19:24:00 EST" duration-ms="344" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["teardown"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Navigate to Application and login]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.CucumberRunner@5d0a1059]" started-at="2022-12-10T19:24:00 EST" name="tearDownClass" finished-at="2022-12-10T19:24:00 EST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- runners.CucumberRunner -->
+    </test> <!-- Cucumber Test -->
+  </suite> <!-- Suite -->
+</testng-results>
