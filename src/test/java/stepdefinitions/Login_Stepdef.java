@@ -16,11 +16,4 @@ public class Login_Stepdef extends AbstractPage{
 	LoginPage loginPage;
 	
 	
-	@Given("user launched browser and navigated to application")
-	public void userLaunchedBrowser() {
-		try {driver.getTitle();
-		}catch(Exception e) {
-			initialize();
-		}
-	}
 }

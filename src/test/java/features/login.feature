@@ -22,10 +22,11 @@
 Feature: Navigate to Application and login
   
 Background:
-Given user launched browser and navigated to application
+Given user launched browser and navigated to url
 
-Scenario: Login
-Given user click on home button
+Scenario: Navigate to Best Sellers
+Given user click All button
+Then user click on Best Sellers link
 
 Scenario: teardown
 And tear down

@@ -2,6 +2,7 @@ package commonUtilities;
 
 import java.io.File;
 
+
 import java.io.IOException;
 
 import org.apache.commons.io.FileUtils;
@@ -83,6 +84,20 @@ public class GenericMethods extends AbstractPage{
 	
 	public void redirectToUrlHomepage() {
 		navigateTo(prop.getProperty("url"), true);
+	}
+	
+	public void isDisplayed(By locator, String log, boolean flag) throws IOException {
+		try {
+			driver.findElement(locator).isDisplayed();
+			test.pass("Element is visible: " + log);
+		}catch(Exception e) {
+			test.fail("Could not find element: " + log);
+			test.addScreenCaptureFromPath("./screenshots/"+Screenshot.takeScreenshot(driver));
+			redirectToUrlHomepage();
+			if(flag) {
+				Assert.assertTrue(false);
+			}
+		}
 	}
 	
 	
