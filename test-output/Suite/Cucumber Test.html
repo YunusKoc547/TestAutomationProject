@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Cucumber Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Dec 11 00:09:43 EST 2022</td>
+<td>Started on:</td><td>Sun Dec 11 00:37:41 EST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>20 seconds (20445 ms)</td>
+<tr><td>Total time:</td><td>10 seconds (10022 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,34 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='runners.CucumberRunner.runScenario()'><b>runScenario</b><br>Test class: runners.CucumberRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Navigate to Best Sellers", "Optional[Navigate to Application and login]"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at commonUtilities.GenericMethods.isDisplayed(GenericMethods.java:79)
+	at pages.HomePage.clickOnBestSellersLink(HomePage.java:30)
+	at stepdefinitions.Home_Stepdef.thenUserClickOnBestSellersLink(Home_Stepdef.java:35)
+	at ?.user click on Best Sellers link(file:///C:/Users/yunus/eclipse-AutomationProject/AutomationProject/src/test/java/features/login.feature:32)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace134943275", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace134943275'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at commonUtilities.GenericMethods.isDisplayed(GenericMethods.java:79)
+	at pages.HomePage.clickOnBestSellersLink(HomePage.java:30)
+	at stepdefinitions.Home_Stepdef.thenUserClickOnBestSellersLink(Home_Stepdef.java:35)
+	at ?.user click on Best Sellers link(file:///C:/Users/yunus/eclipse-AutomationProject/AutomationProject/src/test/java/features/login.feature:32)
+</pre></div></td>
+<td>9</td>
+<td>runners.CucumberRunner@5d0a1059</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,14 +103,9 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runners.CucumberRunner.runScenario()'><b>runScenario</b><br>Test class: runners.CucumberRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Navigate to Best Sellers", "Optional[Navigate to Application and login]"</td>
-<td></td>
-<td>3</td>
-<td>runners.CucumberRunner@5d0a1059</td></tr>
-<tr>
 <td title='runners.CucumberRunner.runScenario()'><b>runScenario</b><br>Test class: runners.CucumberRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "teardown", "Optional[Navigate to Application and login]"</td>
 <td></td>
-<td>16</td>
+<td>0</td>
 <td>runners.CucumberRunner@5d0a1059</td></tr>
 </table><p>
 </body>

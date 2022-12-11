@@ -18,14 +18,14 @@ public class HomePage extends AbstractPage{
 	By allDropdownButton = By.xpath("//a//span[text()='All']");
 	By menuCustomerName = By.xpath("//div[@id='hmenu-customer-profile-right']//b[contains(text(),'Hello')]");
 	By bestSellersLinkOnLeftPanel = By.xpath("//ul//a[text()='Best Sellers']");
-	By bestSellersTitle = By.xpath("//span[@id='zg_banner_text' and contains(text(),'Best Sellers')]");
+	By bestSellersTitle = By.xpath("//span[@id='zg_banner_text' and contains(text(),'Best Sellers')]1");
 	
-	public void clickOnAllDropdownButton() throws IOException {		
+	public void clickOnAllDropdownButton() throws IOException, InterruptedException {		
 		genericMethods.clickElement(allDropdownButton,"\"All\" dropdown button",true);
 		genericMethods.isDisplayed(menuCustomerName, "Menu Customer Name", true);
 	}
 	
-	public void clickOnBestSellersLink() throws IOException {		
+	public void clickOnBestSellersLink() throws IOException, InterruptedException {		
 		genericMethods.clickElement(bestSellersLinkOnLeftPanel,"\"Best Sellers\" link",true);	
 		genericMethods.isDisplayed(bestSellersTitle, "\"Amazon Best Sellers\" title", true);
 	}

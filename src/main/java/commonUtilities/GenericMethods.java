@@ -13,7 +13,7 @@ import org.testng.Assert;
 
 public class GenericMethods extends AbstractPage{
 	
-	public void clickElement(By locator, String log, boolean flag) throws IOException {
+	public void clickElement(By locator, String log, boolean flag) throws IOException, InterruptedException {
 		
 		try {
 			driver.findElement(locator).click();
@@ -26,7 +26,7 @@ public class GenericMethods extends AbstractPage{
 		}	
 	}
 	
-	public void clickElement(By locator, String log) throws IOException {
+	public void clickElement(By locator, String log) throws IOException, InterruptedException {
 		
 		try {
 			driver.findElement(locator).click();
@@ -37,7 +37,7 @@ public class GenericMethods extends AbstractPage{
 		}	
 	}
 	
-	public void navigateTo(String locator, String log, boolean flag) throws IOException {
+	public void navigateTo(String locator, String log, boolean flag) throws IOException, InterruptedException {
 		try {
 			driver.get(locator);
 			test.pass("Navigated to: " + log);
@@ -69,7 +69,7 @@ public class GenericMethods extends AbstractPage{
 		navigateTo(prop.getProperty("url"), true);
 	}
 	
-	public void isDisplayed(By locator, String log, boolean flag) throws IOException {
+	public void isDisplayed(By locator, String log, boolean flag) throws IOException, InterruptedException {
 		try {
 			driver.findElement(locator).isDisplayed();
 			test.pass("Element is visible: " + log);

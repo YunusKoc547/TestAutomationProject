@@ -37,7 +37,7 @@ public class AbstractPage {
 	
 	
 	GenericMethods genericMethods;
-	public void initialize() throws IOException {	
+	public void initialize() throws IOException, InterruptedException {	
 
 		
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MMddHHmm");  

@@ -18,7 +18,7 @@ public class Home_Stepdef extends AbstractPage{
 	GenericMethods genericMethods = new GenericMethods();
 	
 	@Given("user launched browser and navigated to url")
-	public void userLaunchedBrowser() throws IOException {
+	public void userLaunchedBrowser() throws IOException, InterruptedException {
 		try {driver.getTitle();
 		}catch(Exception e) {
 			initialize();
@@ -31,7 +31,7 @@ public class Home_Stepdef extends AbstractPage{
 	}
 	
 	@Then("user click on Best Sellers link")
-	public void thenUserClickOnBestSellersLink() throws IOException {
+	public void thenUserClickOnBestSellersLink() throws IOException, InterruptedException {
 		homePage.clickOnBestSellersLink();
 	}
 		
