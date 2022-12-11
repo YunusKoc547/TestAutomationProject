@@ -24,5 +24,13 @@ public class Screenshot extends AbstractPage{
 		
 		return img;
 	}
+	
+	public static void logFail(String log, boolean screenshot) throws IOException {
+		test.fail("Could not find element: " + log);
+		if(screenshot) {
+			test.addScreenCaptureFromPath("./screenshots/"+Screenshot.takeScreenshot(driver));
+			GenericMethods.redirectToUrlHomepage();
+		}
+	}
 
 }

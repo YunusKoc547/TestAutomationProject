@@ -1,72 +1,55 @@
 package commonUtilities;
 
-import java.io.File;
 
 
 import java.io.IOException;
 
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.testng.Assert;
 
-import com.aventstack.extentreports.Status;
 
 
 
 
 public class GenericMethods extends AbstractPage{
-
 	
-	String path;
-	public void addScreenshot() throws IOException {
-
-		File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		path = ".//screenshot/screen.png";
-		FileUtils.copyFile(screenshot, new File(path));
-	}
-	
-	
-	public void clickElement(By locator, String log, boolean flag) {
+	public void clickElement(By locator, String log, boolean flag) throws IOException {
 		
 		try {
 			driver.findElement(locator).click();
 			test.pass("Click Element: " + log);
 		}catch(Exception e) {
-			test.fail("Could not click: " + log);
-			redirectToUrlHomepage();
+			Screenshot.logFail(log,true);
 			if(flag) {
 				Assert.assertTrue(false);
 			}
 		}	
 	}
 	
-	public void clickElement(By locator, String log) {
+	public void clickElement(By locator, String log) throws IOException {
 		
 		try {
 			driver.findElement(locator).click();
 			test.pass("Click Element: " + log);
 		}catch(Exception e) {
-			redirectToUrlHomepage();
+			Screenshot.logFail(log,true);
 			test.fail("Could not click: " + log);
 		}	
 	}
 	
-	public void navigateTo(String locator, String log, boolean flag) {
+	public void navigateTo(String locator, String log, boolean flag) throws IOException {
 		try {
 			driver.get(locator);
 			test.pass("Navigated to: " + log);
 		}catch(Exception e) {
-			test.fail("Could not Navigate to: " + log);
-			redirectToUrlHomepage();
+			Screenshot.logFail(log,true);
 			if(flag) {
 				Assert.assertTrue(false);
 			}
 		}
 	}
 	
-	public void navigateTo(String locator, boolean flag) {
+	public static void navigateTo(String locator, boolean flag) {
 		try {
 			driver.get(locator);
 		}catch(Exception e) {
@@ -82,7 +65,7 @@ public class GenericMethods extends AbstractPage{
 		driver.close();
 	}
 	
-	public void redirectToUrlHomepage() {
+	public static void redirectToUrlHomepage() {
 		navigateTo(prop.getProperty("url"), true);
 	}
 	
@@ -91,9 +74,7 @@ public class GenericMethods extends AbstractPage{
 			driver.findElement(locator).isDisplayed();
 			test.pass("Element is visible: " + log);
 		}catch(Exception e) {
-			test.fail("Could not find element: " + log);
-			test.addScreenCaptureFromPath("./screenshots/"+Screenshot.takeScreenshot(driver));
-			redirectToUrlHomepage();
+			Screenshot.logFail(log,true);
 			if(flag) {
 				Assert.assertTrue(false);
 			}
