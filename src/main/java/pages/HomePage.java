@@ -18,7 +18,7 @@ public class HomePage extends AbstractPage{
 	By allDropdownButton = By.xpath("//a//span[text()='All']");
 	By menuCustomerName = By.xpath("//div[@id='hmenu-customer-profile-right']//b[contains(text(),'Hello')]");
 	By bestSellersLinkOnLeftPanel = By.xpath("//ul//a[text()='Best Sellers']");
-	By bestSellersTitle = By.xpath("//span[@id='zg_banner_text' and contains(text(),'Best Sellers')]1");
+	By bestSellersTitle = By.xpath("//span[@id='zg_banner_text' and contains(text(),'Best Sellers')]");
 	
 	public void clickOnAllDropdownButton() throws IOException, InterruptedException {		
 		genericMethods.clickElement(allDropdownButton,"\"All\" dropdown button",true);
