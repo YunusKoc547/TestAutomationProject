@@ -1,6 +1,8 @@
 package commonUtilities;
 
 import java.io.File;
+
+
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -12,6 +14,8 @@ import org.openqa.selenium.WebDriver;
 
 public class Screenshot extends AbstractPage{
 	
+	GenericMethods generic = new GenericMethods();
+		
 	public static String takeScreenshot(WebDriver driver) throws IOException {
 		TakesScreenshot ts = (TakesScreenshot) AbstractPage.driver;
 		

@@ -24,9 +24,13 @@ Feature: Navigate to Application and login
 Background:
 Given user launched browser and navigated to url
 
-Scenario: Navigate to Best Sellers
+Scenario Outline: Navigate to "<moduleName>" module
 Given user click All button
-Then user click on Best Sellers link
+Then user click on "<moduleName>" link
+Examples:
+| moduleName |
+| Best Sellers |
+| New Releases |
 
 Scenario: teardown
 And tear down

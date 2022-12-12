@@ -30,9 +30,9 @@ public class Home_Stepdef extends AbstractPage{
 		homePage.clickOnAllDropdownButton();	
 	}
 	
-	@Then("user click on Best Sellers link")
-	public void thenUserClickOnBestSellersLink() throws IOException, InterruptedException {
-		homePage.clickOnBestSellersLink();
+	@Then("user click on {string} link")
+	public void thenUserClickOnBestSellersLink(String moduleName) throws IOException, InterruptedException {
+		homePage.clickOnModuleLink(moduleName);
 	}
 		
 	@And("tear down")

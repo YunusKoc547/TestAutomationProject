@@ -3,10 +3,8 @@ package pages;
 import java.io.IOException;
 
 
+
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 
 import commonUtilities.AbstractPage;
 import commonUtilities.GenericMethods;
@@ -22,11 +20,21 @@ public class HomePage extends AbstractPage{
 	
 	public void clickOnAllDropdownButton() throws IOException, InterruptedException {		
 		genericMethods.clickElement(allDropdownButton,"\"All\" dropdown button",true);
-		genericMethods.isDisplayed(menuCustomerName, "Menu Customer Name", true);
+		genericMethods.isDisplayed(menuCustomerName, "All Modules panel", true);
 	}
 	
 	public void clickOnBestSellersLink() throws IOException, InterruptedException {		
 		genericMethods.clickElement(bestSellersLinkOnLeftPanel,"\"Best Sellers\" link",true);	
 		genericMethods.isDisplayed(bestSellersTitle, "\"Amazon Best Sellers\" title", true);
+	}
+	
+	public void clickOnModuleLink(String moduleName) throws IOException, InterruptedException {	
+		By moduleLinkOnLeftPanel = By.xpath("//ul[@class='hmenu hmenu-visible']//a[text()='"+moduleName+"']");
+		By moduleTitle = By.xpath("//span[@id='zg_banner_text' and contains(text(),'"+moduleName+"')]");
+		genericMethods.clickElement(moduleLinkOnLeftPanel,"\""+moduleName+"\" link",true);	
+		
+		if(moduleName.equals("New Releases")) {
+			genericMethods.isDisplayed(moduleTitle, "\""+moduleName+"\" title", true);
+		}
 	}
 }
