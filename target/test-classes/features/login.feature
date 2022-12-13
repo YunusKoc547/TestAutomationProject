@@ -28,7 +28,7 @@ Scenario Outline: Navigate to "<moduleName>" module
 Given user click All button
 Then user click on "<moduleName>" link
 Examples:
-| moduleName |
+| moduleName   |
 | Best Sellers |
 | New Releases |
 

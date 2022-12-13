@@ -34,7 +34,6 @@ public class Screenshot extends AbstractPage{
 		if(screenshot) {
 			Thread.sleep(1000);
 			test.addScreenCaptureFromPath("./screenshots/"+Screenshot.takeScreenshot(driver));
-			GenericMethods.redirectToUrlHomepage();
 		}
 	}
 

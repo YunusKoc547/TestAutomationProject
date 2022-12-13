@@ -19,7 +19,9 @@ public class Home_Stepdef extends AbstractPage{
 	
 	@Given("user launched browser and navigated to url")
 	public void userLaunchedBrowser() throws IOException, InterruptedException {
-		try {driver.getTitle();
+		try {
+			driver.getTitle();
+			GenericMethods.redirectToUrlHomepage();;
 		}catch(Exception e) {
 			initialize();
 		}

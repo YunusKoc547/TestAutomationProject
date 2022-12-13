@@ -18,12 +18,6 @@ public class Hooks extends AbstractPage{
 //	   extent.attachReporter(reporter);
 //	}
 
-	@After
-    public void afterScenario(){
-        System.out.println("This will run after the Scenario");
-        driver.quit();
-		extent.flush();
-    }
 	
 //	@After
 //    public void tearDown() {

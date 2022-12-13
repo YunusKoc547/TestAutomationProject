@@ -32,9 +32,6 @@ public class HomePage extends AbstractPage{
 		By moduleLinkOnLeftPanel = By.xpath("//ul[@class='hmenu hmenu-visible']//a[text()='"+moduleName+"']");
 		By moduleTitle = By.xpath("//span[@id='zg_banner_text' and contains(text(),'"+moduleName+"')]");
 		genericMethods.clickElement(moduleLinkOnLeftPanel,"\""+moduleName+"\" link",true);	
-		
-		if(moduleName.equals("New Releases")) {
-			genericMethods.isDisplayed(moduleTitle, "\""+moduleName+"\" title", true);
-		}
+		genericMethods.isDisplayed(moduleTitle, "\""+moduleName+"\" title", true);
 	}
 }
