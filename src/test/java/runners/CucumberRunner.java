@@ -15,7 +15,7 @@ import io.cucumber.testng.CucumberOptions;
 						"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
 				dryRun=false,
 				monochrome=true,
-				glue = {"stepdefinitions"})
+				glue = {"stepdefinitions.Hooks","stepdefinitions"})
 public class CucumberRunner extends AbstractTestNGCucumberTests{
 
 	

@@ -3,6 +3,9 @@ package stepdefinitions;
 import java.io.IOException;
 import java.sql.SQLException;
 
+import com.aventstack.extentreports.GherkinKeyword;
+import com.aventstack.extentreports.Status;
+
 import commonUtilities.AbstractPage;
 import commonUtilities.GenericMethods;
 import io.cucumber.java.en.And;
@@ -19,7 +22,7 @@ public class Home_Stepdef extends AbstractPage{
 	GenericMethods genericMethods = new GenericMethods();
 	
 	@Given("user launched browser and navigated to url")
-	public void userLaunchedBrowser() throws IOException, InterruptedException {
+	public void userLaunchedBrowser() throws IOException, InterruptedException, ClassNotFoundException {
 		try {
 			driver.getTitle();
 			GenericMethods.redirectToUrlHomepage();;
@@ -29,12 +32,12 @@ public class Home_Stepdef extends AbstractPage{
 	}
 	
 	@Given("user click All button")
-	public void userClickOnAllButton() throws IOException, InterruptedException {
+	public void userClickOnAllButton() throws IOException, InterruptedException, ClassNotFoundException {
 		homePage.clickOnAllDropdownButton();	
 	}
 	
 	@Then("user click on {string} link")
-	public void thenUserClickOnBestSellersLink(String moduleName) throws IOException, InterruptedException {
+	public void thenUserClickOnBestSellersLink(String moduleName) throws IOException, InterruptedException, ClassNotFoundException {
 		homePage.clickOnModuleLink(moduleName);
 	}
 		

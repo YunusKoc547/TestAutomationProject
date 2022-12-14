@@ -30,10 +30,10 @@ public class Screenshot extends AbstractPage{
 	}
 	
 	public static void logFail(String log, boolean screenshot) throws IOException, InterruptedException {
-		test.fail(log);
+		feature.fail(log);
 		if(screenshot) {
 			Thread.sleep(1000);
-			test.addScreenCaptureFromPath("./screenshots/"+Screenshot.takeScreenshot(driver));
+			feature.addScreenCaptureFromPath("./screenshots/"+Screenshot.takeScreenshot(driver));
 		}
 	}
 

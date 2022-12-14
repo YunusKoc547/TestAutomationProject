@@ -4,6 +4,7 @@ import java.io.File;
 
 
 
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -12,45 +13,54 @@ import java.time.format.DateTimeFormatter;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.NoSuchSessionException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.GherkinKeyword;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+
+import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
+
+
+
+
+
 
 
 public class AbstractPage {
 
 	public static WebDriver driver;
 	
-	public static ExtentReports extent;
+	public static ExtentSparkReporter reporter;
+	
+	public static ExtentReports extent = new ExtentReports();
 	public static ExtentTest logger;
 	public static ExtentTest test;
-	public static ExtentSparkReporter reporter;
+	
 	public static Properties prop;
 	public static FileInputStream fileInput;
 	
-//	static Scenario scenario = new Scenario();
+	public static ExtentTest feature;
+//	public static ExtentTest scenario;
+	public Scenario scenario;
 	
+//	static Scenario scenario = new Scenario();
+	 
 	
 	GenericMethods genericMethods;
-	public void initialize() throws IOException, InterruptedException {	
-
+	public void initialize() throws IOException, InterruptedException, ClassNotFoundException {	
+		genericMethods = new GenericMethods();
 		
+			    					
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MMddHHmm");  
 		LocalDateTime now = LocalDateTime.now();  
-		genericMethods = new GenericMethods();
+		
 		reporter = new ExtentSparkReporter("Reports/AutomationReport"+dtf.format(now)+".html");
-			    
-		extent = new ExtentReports();
-		extent.attachReporter(reporter);
 		test = extent.createTest("Automation Execution report");
-			   
-			
-					
 		File file = new File(System.getProperty("user.dir") + "//src//test//resources//config.properties");
 					
 					
@@ -83,6 +93,8 @@ public class AbstractPage {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		genericMethods.navigateTo(prop.getProperty("url"), prop.getProperty("url"), true);
+		
+		
 
 	}
 	

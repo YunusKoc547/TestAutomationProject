@@ -52,7 +52,7 @@ public class LoginPage extends AbstractPage{
 			}
 			
 		}catch(Exception e) {
-				test.info("User is already logged in");
+				feature.info("User is already logged in");
 		}
 	}
 }

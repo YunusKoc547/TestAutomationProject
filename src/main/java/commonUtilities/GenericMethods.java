@@ -20,7 +20,7 @@ public class GenericMethods extends AbstractPage{
 		
 		try {
 			driver.findElement(locator).click();
-			test.pass("Click Element: " + log);
+			feature.pass("Click Element: " + log);
 		}catch(Exception e) {
 			Screenshot.logFail("ERROR: Could not click: " + log,true);
 			if(flag) {
@@ -33,17 +33,16 @@ public class GenericMethods extends AbstractPage{
 		
 		try {
 			driver.findElement(locator).click();
-			test.pass("Click Element: " + log);
+			feature.pass("Click Element: " + log);
 		}catch(Exception e) {
 			Screenshot.logFail("ERROR: Could not click: " + log,true);
-			test.fail("Could not click: " + log);
 		}	
 	}
 	
 	public void navigateTo(String locator, String log, boolean flag) throws IOException, InterruptedException {
 		try {
 			driver.get(locator);
-			test.pass("Navigated to: " + log);
+			feature.pass("Navigated to: " + log);
 		}catch(Exception e) {
 			Screenshot.logFail("ERROR: Could not navigate to: " + log,true);
 			if(flag) {
@@ -64,6 +63,7 @@ public class GenericMethods extends AbstractPage{
 	}
 	
 	public void tearDown() throws SQLException {
+//		extent.removeTest("Automation Execution report");
 		extent.flush();
 		driver.close();
 		DatabaseMethods.con.close();
@@ -76,7 +76,7 @@ public class GenericMethods extends AbstractPage{
 	public void isDisplayed(By locator, String log, boolean flag) throws IOException, InterruptedException {
 		try {
 			driver.findElement(locator).isDisplayed();
-			test.pass("Element is visible: " + log);
+			feature.pass("Element is visible: " + log);
 		}catch(Exception e) {
 			Screenshot.logFail("Element NOT Visible:" + log,true);
 			if(flag) {
@@ -94,7 +94,7 @@ public class GenericMethods extends AbstractPage{
 				Assert.assertFalse(true);
 			}
 		}catch(Exception e) {
-			test.info("No error messages received");
+			feature.info("No error messages received");
 		}
 	}
 //	
@@ -126,7 +126,7 @@ public class GenericMethods extends AbstractPage{
 	public void setInputValue(By locator,String keys, String field,boolean flag) throws IOException, InterruptedException {
 		try {
 			driver.findElement(locator).sendKeys(keys);
-			test.pass("Entered \"" + keys + "\" into " + field + " Successfully");
+			feature.pass("Entered \"" + keys + "\" into " + field + " Successfully");
 		}catch(Exception e) {
 			Screenshot.logFail("ERROR: Could not enter \"" + keys + "\" into " + field,true);
 			if(flag) {
@@ -139,9 +139,9 @@ public class GenericMethods extends AbstractPage{
 		try {
 			driver.findElement(locator).sendKeys(keys);
 			if(isPassword == false) {
-				test.pass("Entered \"" + keys + "\" into " + field + " Successfully");
+				feature.pass("Entered \"" + keys + "\" into " + field + " Successfully");
 			}else {
-				test.pass("password entered successfully");
+				feature.pass("password entered successfully");
 			}
 		}catch(Exception e) {
 			if(isPassword == false) {

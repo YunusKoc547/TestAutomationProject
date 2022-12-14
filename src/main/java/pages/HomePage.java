@@ -6,6 +6,8 @@ import java.io.IOException;
 
 import org.openqa.selenium.By;
 
+import com.aventstack.extentreports.GherkinKeyword;
+
 import commonUtilities.AbstractPage;
 import commonUtilities.GenericMethods;
 
@@ -18,7 +20,7 @@ public class HomePage extends AbstractPage{
 	By bestSellersLinkOnLeftPanel = By.xpath("//ul//a[text()='Best Sellers']");
 	By bestSellersTitle = By.xpath("//span[@id='zg_banner_text' and contains(text(),'Best Sellers')]");
 	
-	public void clickOnAllDropdownButton() throws IOException, InterruptedException {		
+	public void clickOnAllDropdownButton() throws IOException, InterruptedException, ClassNotFoundException {	
 		genericMethods.clickElement(allDropdownButton,"\"All\" dropdown button",true);
 		genericMethods.isDisplayed(menuCustomerName, "All Modules panel", true);
 	}
