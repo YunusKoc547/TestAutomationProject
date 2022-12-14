@@ -56,7 +56,7 @@ public class DatabaseMethods extends AbstractPage{
 		}
 	}
 	
-	//0th Index = email address, 1st index = password, 2nd index = first_name, 3rd index = last_name
+	//0th Index = email address || 1st index = password || 2nd index = first_name || 3rd index = last_name
 	public static String[] userInformation() throws SQLException {
 		sqlFileInit();
 		rs = stmt.executeQuery(sqlProp.getProperty("selectAllFromCredentials"));

@@ -27,26 +27,32 @@ public class LoginPage extends AbstractPage{
 	}
 	
 	public void loginWithValidCredentials() throws SQLException, IOException, InterruptedException {
-		if(genericMethods.isDisplayed(userAccountInfoUnlogged)) {
-			String email = DatabaseMethods.userInformation()[0];
-			String password = DatabaseMethods.userInformation()[1];
-			String firstName = DatabaseMethods.userInformation()[2];
-			String lastName = DatabaseMethods.userInformation()[3];
+		try {
+			if(genericMethods.isDisplayed(userAccountInfoUnlogged)) {
+				
+				String email = DatabaseMethods.userInformation()[0];
+				String password = DatabaseMethods.userInformation()[1];
+				String firstName = DatabaseMethods.userInformation()[2];
+				String lastName = DatabaseMethods.userInformation()[3];
+				
+				By userFirstName = By.xpath("//span[@id='nav-link-accountList-nav-line-1' and contains(text(),'"+firstName+"')]");
+				System.out.println("email: " + email);
+				System.out.println("password: " + password);
+				
+				genericMethods.clickElement(accountsAndListsButton,"Accounts and Lists button",true);
+				genericMethods.setInputValue(signInTextbox, email, "Email Address textbox field", true);
+				
+				genericMethods.clickElement(continueButton, "Continue button", true);
+				genericMethods.setInputValue(passwordTextbox, password, "Password field",true,true);
+				
+				genericMethods.clickElement(signInButton, "Sign in button", true);
+//				if(genericMethods.isDisplayed(passwordIncorrectMessage))
+				genericMethods.isNotDisplayed(passwordIncorrectMessage, "Password Incorrect message", true);
+				genericMethods.isDisplayed(userFirstName, "User Name " + DatabaseMethods.userInformation()[2], true);
+			}
 			
-			By userFirstName = By.xpath("//span[@id='nav-link-accountList-nav-line-1' and contains(text(),'"+firstName+"')]");
-			System.out.println("email: " + email);
-			System.out.println("password: " + password);
-			
-			genericMethods.clickElement(accountsAndListsButton,"Accounts and Lists button",true);
-			genericMethods.setInputValue(signInTextbox, email, "Email Address textbox field", true);
-			
-			genericMethods.clickElement(continueButton, "Continue button", true);
-			genericMethods.setInputValue(passwordTextbox, password, "Password field",true,true);
-			
-			genericMethods.clickElement(signInButton, "Sign in button", true);
-//			if(genericMethods.isDisplayed(passwordIncorrectMessage))
-			genericMethods.isNotDisplayed(passwordIncorrectMessage, "Password Incorrect message", true);
-			genericMethods.isDisplayed(userFirstName, "User Name " + DatabaseMethods.userInformation()[2], true);
+		}catch(Exception e) {
+				test.info("User is already logged in");
 		}
 	}
 }

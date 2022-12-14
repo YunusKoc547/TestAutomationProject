@@ -24,6 +24,7 @@ Feature: Navigate to Application and login
 Background:
 Given user launched browser and navigated to url
 
+
 Scenario Outline: Navigate to "<moduleName>" module
 Given user click All button
 Then user click on "<moduleName>" link
@@ -32,9 +33,11 @@ Examples:
 | Best Sellers |
 | New Releases |
 
-@db
-Scenario: Login with valid credentials
+Scenario: User login with valid credentials
 Given user connected to database
+Given user logged in with valid credentials
+
+Scenario: test
 Given user logged in with valid credentials
 
 @db
