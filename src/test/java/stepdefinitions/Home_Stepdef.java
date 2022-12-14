@@ -1,6 +1,7 @@
 package stepdefinitions;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import commonUtilities.AbstractPage;
 import commonUtilities.GenericMethods;
@@ -38,7 +39,7 @@ public class Home_Stepdef extends AbstractPage{
 	}
 		
 	@And("tear down")
-	public void tearDown() {
+	public void tearDown() throws SQLException {
 		genericMethods.tearDown();
 	}
 }

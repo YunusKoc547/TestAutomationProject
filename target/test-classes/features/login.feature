@@ -32,6 +32,12 @@ Examples:
 | Best Sellers |
 | New Releases |
 
+@db
+Scenario: Login with valid credentials
+Given user connected to database
+Given user logged in with valid credentials
+
+@db
 Scenario: teardown
 And tear down
 
