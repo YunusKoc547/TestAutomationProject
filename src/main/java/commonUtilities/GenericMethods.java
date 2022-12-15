@@ -63,10 +63,15 @@ public class GenericMethods extends AbstractPage{
 	}
 	
 	public void tearDown() throws SQLException {
-//		extent.removeTest("Automation Execution report");
 		extent.flush();
+//		extent.removeTest("Automation Execution report");
 		driver.close();
-		DatabaseMethods.con.close();
+		
+		try {
+			DatabaseMethods.con.close();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
 	public static void redirectToUrlHomepage() {

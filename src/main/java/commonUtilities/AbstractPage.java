@@ -39,7 +39,7 @@ public class AbstractPage {
 	
 	public static ExtentReports extent = new ExtentReports();
 	public static ExtentTest logger;
-	public static ExtentTest test;
+	public static ExtentTest test= extent.createTest("Automation Execution report");
 	
 	public static Properties prop;
 	public static FileInputStream fileInput;
@@ -58,9 +58,10 @@ public class AbstractPage {
 			    					
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MMddHHmm");  
 		LocalDateTime now = LocalDateTime.now();  
-		
+				
 		reporter = new ExtentSparkReporter("Reports/AutomationReport"+dtf.format(now)+".html");
-		test = extent.createTest("Automation Execution report");
+		
+		
 		File file = new File(System.getProperty("user.dir") + "//src//test//resources//config.properties");
 					
 					

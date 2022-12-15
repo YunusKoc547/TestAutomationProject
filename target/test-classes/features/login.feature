@@ -30,7 +30,7 @@ Then user click on "<moduleName>" link
 Examples:
 | moduleName   |
 | Best Sellers |
-| New Release  |
+| New Releases |
 @login
 Scenario: User login with valid credentials
 Given user connected to database
