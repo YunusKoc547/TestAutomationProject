@@ -102,31 +102,11 @@ public class GenericMethods extends AbstractPage{
 			feature.info("No error messages received");
 		}
 	}
-//	
-//	public boolean isDisplayed(By locator, String log, boolean flag) throws IOException, InterruptedException {
-//		try {
-//			driver.findElement(locator).isDisplayed();
-//			test.pass("Element is visible: " + log);
-//		}catch(Exception e) {
-//			Screenshot.logFail("ERROR: Element not displayed: " + log,true);
-//			if(flag) {
-//				Assert.assertTrue(false);
-//			}
-//		}
-//	}
 	
 	public boolean isDisplayed(By locator) throws IOException, InterruptedException {
 		
 		return driver.findElement(locator).isDisplayed();
 	}
-	
-//	public b isDisplayed(By locator) throws IOException, InterruptedException {
-//		try {
-//			driver.findElement(locator).isDisplayed();
-//		}catch(Exception e) {
-//			Screenshot.logFail("Unexpected error when trying to login",true);
-//		}
-//	}
 	
 	public void setInputValue(By locator,String keys, String field,boolean flag) throws IOException, InterruptedException {
 		try {
@@ -160,14 +140,6 @@ public class GenericMethods extends AbstractPage{
 			
 		}
 	}
-	
-//	public <T> List getList() {
-//		List<T> list = new ArrayList<>();
-//		
-//		list.add(null)
-//		return list;
-//		
-//	}
 	
 	
 }

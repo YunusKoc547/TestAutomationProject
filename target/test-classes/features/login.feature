@@ -18,12 +18,12 @@
 #Sample Feature Definition Template
 
 
+@Regression
 Feature: Navigate to Application and login
   
 Background:
 Given user launched browser and navigated to url
 
-@login
 Scenario Outline: Navigate to "<moduleName>" module
 Given user click All button
 Then user click on "<moduleName>" link
@@ -31,6 +31,7 @@ Examples:
 | moduleName   |
 | Best Sellers |
 | New Releases |
+
 @login
 Scenario: User login with valid credentials
 Given user connected to database
@@ -40,7 +41,7 @@ Given user logged in with valid credentials
 Scenario: test
 Given user logged in with valid credentials
 
-@login
+@teardown @login
 Scenario: teardown
 And tear down
 

@@ -1,12 +1,12 @@
 package managers;
-
-import org.openqa.selenium.WebDriver;
-
-import pages.HomePage;
-import pages.LoginPage;
-
+//
+//import org.openqa.selenium.WebDriver;
+//
+//import pages.HomePage;
+//import pages.LoginPage;
+//
 public class PageObjectManager {
-	
+//	
 //	private WebDriver driver;
 //	private LoginPage loginPage;
 //	private HomePage homePage;
@@ -24,5 +24,5 @@ public class PageObjectManager {
 //		
 //		return (homePage == null) ? homePage = new HomePage(driver) : homePage;
 //	}
-
+//
 }

@@ -25,7 +25,7 @@ public class Home_Stepdef extends AbstractPage{
 	public void userLaunchedBrowser() throws IOException, InterruptedException, ClassNotFoundException {
 		try {
 			driver.getTitle();
-			GenericMethods.redirectToUrlHomepage();;
+			GenericMethods.redirectToUrlHomepage();
 		}catch(Exception e) {
 			initialize();
 		}

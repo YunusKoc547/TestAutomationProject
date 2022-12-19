@@ -16,7 +16,7 @@ import io.cucumber.testng.CucumberOptions;
 				dryRun=false,
 				monochrome=true,
 				glue = {"stepdefinitions.Hooks","stepdefinitions"})
-public class CucumberRunner extends AbstractTestNGCucumberTests{
+public class CucumberRunnerLogin extends AbstractTestNGCucumberTests{
 
 	
 }

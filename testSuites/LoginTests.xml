@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test name="Cucumber Test">
   <classes>
-  	<class name="runners.CucumberRunner"></class>
+  	<class name="runners.CucumberRunnerLogin"></class>
   </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

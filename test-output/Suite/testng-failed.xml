@@ -3,13 +3,13 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Cucumber Test(failed)">
     <classes>
-      <class name="runners.CucumberRunner">
+      <class name="runners.CucumberRunnerLogin">
         <methods>
           <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="0"/>
+          <include name="runScenario" invocation-numbers="1"/>
           <include name="tearDownClass"/>
         </methods>
-      </class> <!-- runners.CucumberRunner -->
+      </class> <!-- runners.CucumberRunnerLogin -->
     </classes>
   </test> <!-- Cucumber Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
