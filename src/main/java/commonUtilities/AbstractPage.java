@@ -92,8 +92,13 @@ public class AbstractPage {
 			System.setProperty("webdriver.edge.driver", System.getProperty("user.dir") + "//src/main/java//drivers//msedgedriver.exe");
 			driver = new EdgeDriver();
 		}
-					
-		driver.manage().window().maximize();
+				
+		try {
+			driver.manage().window().maximize();
+		}catch(NullPointerException e) {
+			e.printStackTrace();
+		}
+		
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		genericMethods.navigateTo(prop.getProperty("url"), prop.getProperty("url"), true);
 		
