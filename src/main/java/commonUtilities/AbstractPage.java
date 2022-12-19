@@ -14,8 +14,10 @@ import java.time.format.DateTimeFormatter;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -77,9 +79,15 @@ public class AbstractPage {
 		String browserName = System.getProperty("browser") != null ? System.getProperty("browser") : prop.getProperty("browser");
 					
 		System.out.println(prop.getProperty("browser"));
-		if(browserName.equals("Chrome")) {
+		if(browserName.contains("Chrome")) {
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "//src/main/java//drivers//chromedriver.exe");
-			driver = new ChromeDriver();
+			ChromeOptions options = new ChromeOptions();
+			if(browserName.contains("headless")) {
+				options.addArguments("headless");
+				driver.manage().window().setSize(new Dimension(1920,1080));
+			}
+			
+			driver = new ChromeDriver(options);
 		}else if(browserName.equals("Edge")) {
 			System.setProperty("webdriver.edge.driver", System.getProperty("user.dir") + "//src/main/java//drivers//msedgedriver.exe");
 			driver = new EdgeDriver();
