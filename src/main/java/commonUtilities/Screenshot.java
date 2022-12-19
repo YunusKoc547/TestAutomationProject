@@ -11,6 +11,7 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 
 public class Screenshot extends AbstractPage{
 	
@@ -29,12 +30,17 @@ public class Screenshot extends AbstractPage{
 		return img;
 	}
 	
-	public static void logFail(String log, boolean screenshot) throws IOException, InterruptedException {
+	public static void logFail(String log, boolean screenshot, boolean fail) throws IOException, InterruptedException {
 		feature.fail(log);
 		if(screenshot) {
 			Thread.sleep(1000);
 			feature.addScreenCaptureFromPath("./screenshots/"+Screenshot.takeScreenshot(driver));
 		}
+		if(fail) {
+			Assert.assertTrue(false);
+		}
 	}
+	
+	
 
 }

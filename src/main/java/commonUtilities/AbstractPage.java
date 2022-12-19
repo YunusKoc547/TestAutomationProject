@@ -80,15 +80,20 @@ public class AbstractPage {
 					
 		System.out.println(prop.getProperty("browser"));
 		if(browserName.contains("Chrome")) {
-			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "//src/main/java//drivers//chromedriver.exe");
 			ChromeOptions options = new ChromeOptions();
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "//src/main/java//drivers//chromedriver.exe");
 			if(browserName.contains("headless")) {
 				options.addArguments("headless");
+				driver = new ChromeDriver(options);
 				driver.manage().window().setSize(new Dimension(1920,1080));
+			}else {
+				driver = new ChromeDriver();
 			}
 			
-			driver = new ChromeDriver(options);
+			
+			
 		}else if(browserName.equals("Edge")) {
+
 			System.setProperty("webdriver.edge.driver", System.getProperty("user.dir") + "//src/main/java//drivers//msedgedriver.exe");
 			driver = new EdgeDriver();
 		}
@@ -100,7 +105,9 @@ public class AbstractPage {
 		}
 		
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		
 		genericMethods.navigateTo(prop.getProperty("url"), prop.getProperty("url"), true);
+		
 		
 		return driver;
 		

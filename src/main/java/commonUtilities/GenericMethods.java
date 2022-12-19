@@ -22,32 +22,26 @@ public class GenericMethods extends AbstractPage{
 			driver.findElement(locator).click();
 			feature.pass("Click Element: " + log);
 		}catch(Exception e) {
-			Screenshot.logFail("ERROR: Could not click: " + log,true);
-			if(flag) {
-				Assert.assertTrue(false);
-			}
+			Screenshot.logFail("ERROR: Could not click: " + log,true,flag);
 		}	
 	}
 	
-	public void clickElement(By locator, String log) throws IOException, InterruptedException {
-		
-		try {
-			driver.findElement(locator).click();
-			feature.pass("Click Element: " + log);
-		}catch(Exception e) {
-			Screenshot.logFail("ERROR: Could not click: " + log,true);
-		}	
-	}
+//	public void clickElement(By locator, String log) throws IOException, InterruptedException {
+//		
+//		try {
+//			driver.findElement(locator).click();
+//			feature.pass("Click Element: " + log);
+//		}catch(Exception e) {
+//			Screenshot.logFail("ERROR: Could not click: " + log,true,flag);
+//		}	
+//	}
 	
 	public void navigateTo(String locator, String log, boolean flag) throws IOException, InterruptedException {
 		try {
 			driver.get(locator);
 			feature.pass("Navigated to: " + log);
 		}catch(Exception e) {
-			Screenshot.logFail("ERROR: Could not navigate to: " + log,true);
-			if(flag) {
-				Assert.assertTrue(false);
-			}
+			Screenshot.logFail("ERROR: Could not navigate to: " + log,true,flag);
 		}
 	}
 	
@@ -83,10 +77,7 @@ public class GenericMethods extends AbstractPage{
 			driver.findElement(locator).isDisplayed();
 			feature.pass("Element is visible: " + log);
 		}catch(Exception e) {
-			Screenshot.logFail("Element NOT Visible:" + log,true);
-			if(flag) {
-				Assert.assertTrue(false);
-			}
+			Screenshot.logFail("Element NOT Visible:" + log,true,flag);
 		}
 	}
 	
@@ -94,10 +85,7 @@ public class GenericMethods extends AbstractPage{
 		
 		try{
 			driver.findElement(locator).isDisplayed();
-			Screenshot.logFail("ERROR: " + log + " is displayed", true);
-			if(flag) {
-				Assert.assertFalse(true);
-			}
+			Screenshot.logFail("ERROR: " + log + " is displayed", true,flag);
 		}catch(Exception e) {
 			feature.info("No error messages received");
 		}
@@ -113,10 +101,7 @@ public class GenericMethods extends AbstractPage{
 			driver.findElement(locator).sendKeys(keys);
 			feature.pass("Entered \"" + keys + "\" into " + field + " Successfully");
 		}catch(Exception e) {
-			Screenshot.logFail("ERROR: Could not enter \"" + keys + "\" into " + field,true);
-			if(flag) {
-				Assert.assertTrue(false);	
-			}
+			Screenshot.logFail("ERROR: Could not enter \"" + keys + "\" into " + field,true,flag);
 		}
 	}
 	
@@ -130,12 +115,10 @@ public class GenericMethods extends AbstractPage{
 			}
 		}catch(Exception e) {
 			if(isPassword == false) {
-				Screenshot.logFail("ERROR: Could not enter \"" + keys + "\" into " + field,true);
+				Screenshot.logFail("ERROR: Could not enter \"" + keys + "\" into " + field,true,flag);
 			}else {
-				Screenshot.logFail("ERROR: password not entered successfully",true);
-				if(flag) {
-					Assert.assertTrue(false);	
-				}
+				Screenshot.logFail("ERROR: password not entered successfully",true,flag);
+
 			}
 			
 		}
