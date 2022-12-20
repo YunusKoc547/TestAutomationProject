@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Cucumber Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>3/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/4/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Dec 19 17:06:41 EST 2022</td>
+<td>Started on:</td><td>Mon Dec 19 17:11:13 EST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>47 seconds (47900 ms)</td>
+<tr><td>Total time:</td><td>129 seconds (129257 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,98 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='runners.CucumberRunnerRegression.runScenario()'><b>runScenario</b><br>Test class: runners.CucumberRunnerRegression<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Navigate to "New Releases" module", "Optional[Navigate to Application and login]"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at commonUtilities.Screenshot.logFail(Screenshot.java:40)
+	at commonUtilities.GenericMethods.clickElement(GenericMethods.java:25)
+	at pages.HomePage.clickOnAllDropdownButton(HomePage.java:24)
+	at stepdefinitions.Home_Stepdef.userClickOnAllButton(Home_Stepdef.java:36)
+	at ?.user click All button(file:///C:/Users/yunus/eclipse-AutomationProject/AutomationProject/src/test/java/features/login.feature:28)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace992457879", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace992457879'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at commonUtilities.Screenshot.logFail(Screenshot.java:40)
+	at commonUtilities.GenericMethods.clickElement(GenericMethods.java:25)
+	at pages.HomePage.clickOnAllDropdownButton(HomePage.java:24)
+	at stepdefinitions.Home_Stepdef.userClickOnAllButton(Home_Stepdef.java:36)
+	at ?.user click All button(file:///C:/Users/yunus/eclipse-AutomationProject/AutomationProject/src/test/java/features/login.feature:28)
+</pre></div></td>
+<td>21</td>
+<td>runners.CucumberRunnerRegression@27462a88</td></tr>
+<tr>
+<td title='runners.CucumberRunnerRegression.runScenario()'><b>runScenario</b><br>Test class: runners.CucumberRunnerRegression<br>Test method: Runs Cucumber Scenarios<br>Parameters: "test", "Optional[Navigate to Application and login]"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at commonUtilities.Screenshot.logFail(Screenshot.java:40)
+	at pages.LoginPage.loginWithValidCredentials(LoginPage.java:47)
+	at stepdefinitions.Login_Stepdef.userLoggedInWithValidCredentials(Login_Stepdef.java:29)
+	at ?.user logged in with valid credentials(file:///C:/Users/yunus/eclipse-AutomationProject/AutomationProject/src/test/java/features/login.feature:42)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace658781536", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace658781536'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at commonUtilities.Screenshot.logFail(Screenshot.java:40)
+	at pages.LoginPage.loginWithValidCredentials(LoginPage.java:47)
+	at stepdefinitions.Login_Stepdef.userLoggedInWithValidCredentials(Login_Stepdef.java:29)
+	at ?.user logged in with valid credentials(file:///C:/Users/yunus/eclipse-AutomationProject/AutomationProject/src/test/java/features/login.feature:42)
+</pre></div></td>
+<td>41</td>
+<td>runners.CucumberRunnerRegression@27462a88</td></tr>
+<tr>
+<td title='runners.CucumberRunnerRegression.runScenario()'><b>runScenario</b><br>Test class: runners.CucumberRunnerRegression<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User login with valid credentials", "Optional[Navigate to Application and login]"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at commonUtilities.Screenshot.logFail(Screenshot.java:40)
+	at pages.LoginPage.loginWithValidCredentials(LoginPage.java:47)
+	at stepdefinitions.Login_Stepdef.userLoggedInWithValidCredentials(Login_Stepdef.java:29)
+	at ?.user logged in with valid credentials(file:///C:/Users/yunus/eclipse-AutomationProject/AutomationProject/src/test/java/features/login.feature:38)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace457245448", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace457245448'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at commonUtilities.Screenshot.logFail(Screenshot.java:40)
+	at pages.LoginPage.loginWithValidCredentials(LoginPage.java:47)
+	at stepdefinitions.Login_Stepdef.userLoggedInWithValidCredentials(Login_Stepdef.java:29)
+	at ?.user logged in with valid credentials(file:///C:/Users/yunus/eclipse-AutomationProject/AutomationProject/src/test/java/features/login.feature:38)
+</pre></div></td>
+<td>41</td>
+<td>runners.CucumberRunnerRegression@27462a88</td></tr>
+<tr>
+<td title='runners.CucumberRunnerRegression.runScenario()'><b>runScenario</b><br>Test class: runners.CucumberRunnerRegression<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Navigate to "Best Sellers" module", "Optional[Navigate to Application and login]"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at commonUtilities.Screenshot.logFail(Screenshot.java:40)
+	at commonUtilities.GenericMethods.clickElement(GenericMethods.java:25)
+	at pages.HomePage.clickOnAllDropdownButton(HomePage.java:24)
+	at stepdefinitions.Home_Stepdef.userClickOnAllButton(Home_Stepdef.java:36)
+	at ?.user click All button(file:///C:/Users/yunus/eclipse-AutomationProject/AutomationProject/src/test/java/features/login.feature:28)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace560858993", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace560858993'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at commonUtilities.Screenshot.logFail(Screenshot.java:40)
+	at commonUtilities.GenericMethods.clickElement(GenericMethods.java:25)
+	at pages.HomePage.clickOnAllDropdownButton(HomePage.java:24)
+	at stepdefinitions.Home_Stepdef.userClickOnAllButton(Home_Stepdef.java:36)
+	at ?.user click All button(file:///C:/Users/yunus/eclipse-AutomationProject/AutomationProject/src/test/java/features/login.feature:28)
+</pre></div></td>
+<td>24</td>
+<td>runners.CucumberRunnerRegression@27462a88</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,20 +167,10 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runners.CucumberRunnerLogin.runScenario()'><b>runScenario</b><br>Test class: runners.CucumberRunnerLogin<br>Test method: Runs Cucumber Scenarios<br>Parameters: "teardown", "Optional[Navigate to Application and login]"</td>
+<td title='runners.CucumberRunnerRegression.runScenario()'><b>runScenario</b><br>Test class: runners.CucumberRunnerRegression<br>Test method: Runs Cucumber Scenarios<br>Parameters: "teardown", "Optional[Navigate to Application and login]"</td>
 <td></td>
-<td>1</td>
-<td>runners.CucumberRunnerLogin@27462a88</td></tr>
-<tr>
-<td title='runners.CucumberRunnerLogin.runScenario()'><b>runScenario</b><br>Test class: runners.CucumberRunnerLogin<br>Test method: Runs Cucumber Scenarios<br>Parameters: "test", "Optional[Navigate to Application and login]"</td>
-<td></td>
-<td>20</td>
-<td>runners.CucumberRunnerLogin@27462a88</td></tr>
-<tr>
-<td title='runners.CucumberRunnerLogin.runScenario()'><b>runScenario</b><br>Test class: runners.CucumberRunnerLogin<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User login with valid credentials", "Optional[Navigate to Application and login]"</td>
-<td></td>
-<td>25</td>
-<td>runners.CucumberRunnerLogin@27462a88</td></tr>
+<td>0</td>
+<td>runners.CucumberRunnerRegression@27462a88</td></tr>
 </table><p>
 </body>
 </html>
