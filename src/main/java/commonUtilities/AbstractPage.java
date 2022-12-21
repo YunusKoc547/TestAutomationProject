@@ -55,11 +55,9 @@ public class AbstractPage {
 		LocalDateTime now = LocalDateTime.now();  
 				
 		reporter = new ExtentSparkReporter("Reports/AutomationReport"+dtf.format(now)+".html");
-		
-		
+				
 		File file = new File(System.getProperty("user.dir") + "//src//test//resources//config.properties");
-					
-					
+										
 		try {
 			fileInput = new FileInputStream(file);
 		} catch (FileNotFoundException e) {
@@ -74,8 +72,7 @@ public class AbstractPage {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-					
-					
+										
 		String browserName = System.getProperty("browser") != null ? System.getProperty("browser") : prop.getProperty("browser");
 					
 		System.out.println(prop.getProperty("browser"));
@@ -89,9 +86,7 @@ public class AbstractPage {
 			}else {
 				driver = new ChromeDriver();
 			}
-			
-			
-			
+						
 		}else if(browserName.equals("Edge")) {
 
 			System.setProperty("webdriver.edge.driver", System.getProperty("user.dir") + "//src/main/java//drivers//msedgedriver.exe");
@@ -107,11 +102,8 @@ public class AbstractPage {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		
 		genericMethods.navigateTo(prop.getProperty("url"), prop.getProperty("url"), true);
-		
-		
+				
 		return driver;
-		
-
 	}
 }
 
