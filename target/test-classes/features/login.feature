@@ -38,7 +38,7 @@ Given user connected to database
 Given user logged in with valid credentials
 
 @login
-Scenario: test
+Scenario: Check is user is already logged in
 Given user logged in with valid credentials
 
 @teardown @login
