@@ -75,7 +75,6 @@ public class AbstractPage {
 										
 		String browserName = System.getProperty("browser") != null ? System.getProperty("browser") : prop.getProperty("browser");
 					
-		System.out.println(prop.getProperty("browser"));
 		if(browserName.contains("Chrome")) {
 			ChromeOptions options = new ChromeOptions();
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "//src/main/java//drivers//chromedriver.exe");
