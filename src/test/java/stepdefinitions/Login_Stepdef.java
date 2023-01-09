@@ -19,7 +19,7 @@ public class Login_Stepdef extends AbstractPage{
 
 	LoginPage loginPage = new LoginPage();
 	
-	@Given("user connected to database")
+	@Given("connected to database")
 	public void connectToDatabase() throws SQLException, ClassNotFoundException {
 		loginPage.connectToDatabase();	
 	}

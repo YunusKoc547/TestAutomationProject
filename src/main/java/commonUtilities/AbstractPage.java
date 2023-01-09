@@ -2,10 +2,6 @@ package commonUtilities;
 
 import java.io.File;
 
-
-
-
-
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -13,8 +9,8 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -46,11 +42,12 @@ public class AbstractPage {
 //	static Scenario scenario = new Scenario();
 	 
 	GenericMethods genericMethods;
-	
-	public WebDriver initialize() throws IOException, InterruptedException, ClassNotFoundException {	
+	JavascriptExecutor je;
+
+	public void initialize() throws IOException, InterruptedException, ClassNotFoundException {	
 		genericMethods = new GenericMethods();
-		
 			    					
+		
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MMddHHmm");  
 		LocalDateTime now = LocalDateTime.now();  
 				
@@ -97,12 +94,11 @@ public class AbstractPage {
 		}catch(NullPointerException e) {
 			e.printStackTrace();
 		}
-		
+
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		
 		genericMethods.navigateTo(prop.getProperty("url"), prop.getProperty("url"), true);
 				
-		return driver;
 	}
 }
 

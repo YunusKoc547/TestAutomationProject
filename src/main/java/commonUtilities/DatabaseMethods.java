@@ -33,12 +33,10 @@ public class DatabaseMethods extends AbstractPage{
 		// Create Connection
 		con = DriverManager.getConnection("jdbc:mysql://localhost:3306/users","root","root");
 		
+		System.out.println("hi");
 		// Create statement
 		stmt = con.createStatement();
-		
-		// Execute statement/query
-		
-		// Close connection
+
 		
 	}
 	

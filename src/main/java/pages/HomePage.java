@@ -4,9 +4,9 @@ import java.io.IOException;
 
 
 
-import org.openqa.selenium.By;
 
-import com.aventstack.extentreports.GherkinKeyword;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 import commonUtilities.AbstractPage;
 import commonUtilities.GenericMethods;
@@ -19,6 +19,8 @@ public class HomePage extends AbstractPage{
 	By menuCustomerName = By.xpath("//div[@id='hmenu-customer-profile-right']//b[contains(text(),'Hello')]");
 	By bestSellersLinkOnLeftPanel = By.xpath("//ul//a[text()='Best Sellers']");
 	By bestSellersTitle = By.xpath("//span[@id='zg_banner_text' and contains(text(),'Best Sellers')]");
+	By backToTopButton = By.xpath("//span[@class='navFooterBackToTopText']");
+	By amazonLogo = By.xpath("//a[@id='nav-logo-spritess']");
 	
 	public void clickOnAllDropdownButton() throws IOException, InterruptedException, ClassNotFoundException {	
 		genericMethods.clickElement(allDropdownButton,"\"All\" dropdown button",true);
@@ -35,5 +37,11 @@ public class HomePage extends AbstractPage{
 		By moduleTitle = By.xpath("//span[@id='zg_banner_text' and contains(text(),'"+moduleName+"')]");
 		genericMethods.clickElement(moduleLinkOnLeftPanel,"\""+moduleName+"\" link",true);	
 		genericMethods.isDisplayed(moduleTitle, "\""+moduleName+"\" title", true);
+	}
+	
+	public void clickOnBackToTopButton() throws IOException, InterruptedException {			
+		genericMethods.scrollIntoView(backToTopButton, "Back-to-top button");
+		genericMethods.clickElement(backToTopButton, "\"Back-to-top\" button", true);
+		genericMethods.isDisplayed(amazonLogo,"\"Amazon\" logo",true);
 	}
 }

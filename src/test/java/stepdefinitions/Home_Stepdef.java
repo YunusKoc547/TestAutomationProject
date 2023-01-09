@@ -40,6 +40,11 @@ public class Home_Stepdef extends AbstractPage{
 	public void thenUserClickOnBestSellersLink(String moduleName) throws IOException, InterruptedException, ClassNotFoundException {
 		homePage.clickOnModuleLink(moduleName);
 	}
+	
+	@Then("user scroll to Back-to-top button and click and validate")
+	public void userScrollToBack_To_Top_ButtonAndClickAndValidate() throws IOException, InterruptedException {
+		homePage.clickOnBackToTopButton();
+	}
 		
 	@And("tear down")
 	public void tearDown() throws SQLException {

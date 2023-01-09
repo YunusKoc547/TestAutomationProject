@@ -24,6 +24,11 @@ Feature: Navigate to Application and login
 Background:
 Given user launched browser and navigated to url
 
+@login
+Scenario: User login with valid credentials
+Given connected to database
+Given user logged in with valid credentials
+
 Scenario Outline: Navigate to "<moduleName>" module
 Given user click All button
 Then user click on "<moduleName>" link
@@ -34,14 +39,17 @@ Examples:
 
 @login
 Scenario: User login with valid credentials
-Given user connected to database
+Given connected to database
 Given user logged in with valid credentials
 
-@login
-Scenario: Check is user is already logged in
+@scroll
+Scenario: Validate Back-to-top button functionality
+Given connected to database
 Given user logged in with valid credentials
+Then user scroll to Back-to-top button and click and validate
 
-@teardown @login
+
+@teardown @login @scroll
 Scenario: teardown
 And tear down
 

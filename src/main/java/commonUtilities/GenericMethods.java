@@ -3,11 +3,13 @@ package commonUtilities;
 
 
 import java.io.IOException;
+
+
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 
@@ -15,6 +17,8 @@ import org.testng.Assert;
 
 
 public class GenericMethods extends AbstractPage{
+	
+	
 	
 	public void clickElement(By locator, String log, boolean flag) throws IOException, InterruptedException {
 		
@@ -25,16 +29,7 @@ public class GenericMethods extends AbstractPage{
 			Screenshot.logFail("ERROR: Could not click: " + log,true,flag);
 		}	
 	}
-	
-//	public void clickElement(By locator, String log) throws IOException, InterruptedException {
-//		
-//		try {
-//			driver.findElement(locator).click();
-//			feature.pass("Click Element: " + log);
-//		}catch(Exception e) {
-//			Screenshot.logFail("ERROR: Could not click: " + log,true,flag);
-//		}	
-//	}
+
 	
 	public void navigateTo(String locator, String log, boolean flag) throws IOException, InterruptedException {
 		try {
@@ -121,6 +116,19 @@ public class GenericMethods extends AbstractPage{
 
 			}
 			
+		}
+	}
+	
+	public void scrollIntoView(By locator, String field) throws IOException, InterruptedException {
+		je = (JavascriptExecutor) driver;
+		
+		try {
+			WebElement element = driver.findElement(By.xpath("//span[@class='navFooterBackToTopText']"));
+			je.executeScript("arguments[0].scrollIntoView(true);",element);
+			Thread.sleep(2000);
+			feature.pass("Successfully scrolled " + field + " into view");
+		}catch(Exception e) {
+			Screenshot.logFail("ERROR: Could not scroll " + field + " into view", true, true);
 		}
 	}
 	

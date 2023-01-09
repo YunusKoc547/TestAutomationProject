@@ -29,12 +29,7 @@ public class LoginPage extends AbstractPage{
 	}
 	
 	public void loginWithValidCredentials() throws SQLException, IOException, InterruptedException { //genericMethods.isDisplayed(userAccountInfoUnlogged)
-//		try {
-//			if(genericMethods.isDisplayed(userAccountInfoUnlogged) && genericMethods.isDisplayed(accountsAndListsButton));			
-//		}catch(Exception e) {
-//				feature.info("User is already logged in");
-//				return;
-//		}
+
 		try {
 			if(genericMethods.isDisplayed(userAccountInfoUnlogged)); 
 			}catch(Exception e) {
@@ -55,7 +50,7 @@ public class LoginPage extends AbstractPage{
 				
 			By userFirstName = By.xpath("//span[@id='nav-link-accountList-nav-line-1' and contains(text(),'"+firstName+"')]");
 			System.out.println("email: " + email);
-			System.out.println("password: " + password);
+			System.out.println("password: " + "<PASSWORD>");
 				
 			genericMethods.clickElement(accountsAndListsButton,"Accounts and Lists button",true);
 			genericMethods.setInputValue(signInTextbox, email, "Email Address textbox field", true);
@@ -64,7 +59,7 @@ public class LoginPage extends AbstractPage{
 			genericMethods.setInputValue(passwordTextbox, password, "Password field",true,true);
 				
 			genericMethods.clickElement(signInButton, "Sign in button", true);
-//				if(genericMethods.isDisplayed(passwordIncorrectMessage))
+//			if(genericMethods.isDisplayed(passwordIncorrectMessage))
 			genericMethods.isNotDisplayed(passwordIncorrectMessage, "Password Incorrect message", true);
 			genericMethods.isDisplayed(userFirstName, "User Name " + DatabaseMethods.userInformation()[2], true);
 			
