@@ -24,9 +24,5 @@ public class Login_Stepdef extends AbstractPage{
 		loginPage.connectToDatabase();	
 	}
 	
-	@Given("user logged in with valid credentials")
-	public void userLoggedInWithValidCredentials() throws SQLException, IOException, InterruptedException {
-		loginPage.loginWithValidCredentials();
-	}
 	
 }

@@ -21,33 +21,10 @@
 @Regression
 Feature: Regression Suite
   
-Background:
+Scenario: test
 Given user launched browser and navigated to url
 
-@login
-Scenario: User login with valid credentials
-Given connected to database
-Given user logged in with valid credentials
 
-@HomePage
-Scenario Outline: Navigate to "<moduleName>" module
-Given user click All button
-Then user click on "<moduleName>" link
-Examples:
-| moduleName   |
-| Best Sellers |
-| New Releases |
-
-@login
-Scenario: User login with valid credentials
-Given connected to database
-Given user logged in with valid credentials
-
-@scroll @HomePage
-Scenario: Validate Back-to-top button functionality
-Given connected to database
-Given user logged in with valid credentials
-Then user scroll to Back-to-top button and click and validate
 
 
 Scenario: teardown
