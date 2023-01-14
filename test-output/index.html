@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\yunus\git\HumanBenchMarkAutomation\testSuites\Default.xml</span>
+                    <span>C:\Users\yunus\git\HumanBenchMarkAutomation\testSuites\LoginTests.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,12 +104,17 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="runners.CucumberRunner" class="method navigator-link" hash-for-method="runScenario(&quot;teardown&quot;, &quot;Optional[Regression Suite]&quot;)">runScenario("teardown", "Optional[Regression Suite]")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="runners.CucumberRunnerLogin" class="method navigator-link" hash-for-method="runScenario(&quot;teardown&quot;, &quot;Optional[Login Suite]&quot;)">runScenario("teardown", "Optional[Login Suite]")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="runners.CucumberRunner" class="method navigator-link" hash-for-method="runScenario(&quot;test&quot;, &quot;Optional[Regression Suite]&quot;)">runScenario("test", "Optional[Regression Suite]")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="runners.CucumberRunnerLogin" class="method navigator-link" hash-for-method="runScenario(&quot;User Login with valid credentials&quot;, &quot;Optional[Login Suite]&quot;)">runScenario("User Login with valid credentials", "Optional[Login Suite]")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="runners.CucumberRunnerLogin" class="method navigator-link" hash-for-method="runScenario(&quot;user logged out successfully&quot;, &quot;Optional[Login Suite]&quot;)">runScenario("user logged out successfully", "Optional[Login Suite]")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -127,25 +132,35 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">runners.CucumberRunner</span>
+              <span class="class-name">runners.CucumberRunnerLogin</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;teardown&quot;, &quot;Optional[Regression Suite]&quot;)">
-                  </a> <!-- runScenario("teardown", "Optional[Regression Suite]") -->
+                  <a name="runScenario(&quot;teardown&quot;, &quot;Optional[Login Suite]&quot;)">
+                  </a> <!-- runScenario("teardown", "Optional[Login Suite]") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("teardown", "Optional[Regression Suite]")</span>
+                  <span class="parameters">("teardown", "Optional[Login Suite]")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;test&quot;, &quot;Optional[Regression Suite]&quot;)">
-                  </a> <!-- runScenario("test", "Optional[Regression Suite]") -->
+                  <a name="runScenario(&quot;User Login with valid credentials&quot;, &quot;Optional[Login Suite]&quot;)">
+                  </a> <!-- runScenario("User Login with valid credentials", "Optional[Login Suite]") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("test", "Optional[Regression Suite]")</span>
+                  <span class="parameters">("User Login with valid credentials", "Optional[Login Suite]")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;user logged out successfully&quot;, &quot;Optional[Login Suite]&quot;)">
+                  </a> <!-- runScenario("user logged out successfully", "Optional[Login Suite]") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("user logged out successfully", "Optional[Login Suite]")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -155,7 +170,7 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\yunus\git\HumanBenchMarkAutomation\testSuites\Default.xml</span>
+            <span class="header-content">C:\Users\yunus\git\HumanBenchMarkAutomation\testSuites\LoginTests.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -164,7 +179,7 @@
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Cucumber Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;runners.CucumberRunner&quot;/&gt;
+      &lt;class name=&quot;runners.CucumberRunnerLogin&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Cucumber Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -212,20 +227,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
-data.setCell(0, 2, 'runners.CucumberRunner')
-data.setCell(0, 3, 16493);
+data.setCell(0, 2, 'runners.CucumberRunnerLogin')
+data.setCell(0, 3, 22854);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
-data.setCell(1, 2, 'runners.CucumberRunner')
-data.setCell(1, 3, 2824);
+data.setCell(1, 2, 'runners.CucumberRunnerLogin')
+data.setCell(1, 3, 16535);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'runScenario')
+data.setCell(2, 2, 'runners.CucumberRunnerLogin')
+data.setCell(2, 3, 850);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 19 seconds</span>
+              <span class="suite-total-time">Total running time: 40 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -251,22 +270,26 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">runners.CucumberRunner</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">runners.CucumberRunnerLogin</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUpClass</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">runScenario("test", "Optional[Regression Suite]")</span>
-                <span class="method-start">299 ms</span>
+                <span class="method-name">runScenario("User Login with valid credentials", "Optional[Login Suite]")</span>
+                <span class="method-start">294 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">runScenario("teardown", "Optional[Regression Suite]")</span>
-                <span class="method-start">3125 ms</span>
+                <span class="method-name">runScenario("user logged out successfully", "Optional[Login Suite]")</span>
+                <span class="method-start">23150 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("teardown", "Optional[Login Suite]")</span>
+                <span class="method-start">24001 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">19620 ms</span>
+                <span class="method-start">40537 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

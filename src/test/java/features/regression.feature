@@ -24,9 +24,6 @@ Feature: Regression Suite
 Scenario: test
 Given user launched browser and navigated to url
 
-
-
-
 Scenario: teardown
 And tear down
 

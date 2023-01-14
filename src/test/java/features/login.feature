@@ -17,17 +17,22 @@
 ## (Comments)
 #Sample Feature Definition Template
 
+@login
+Feature: Login Suite
 
-@Regression
-Feature: Regression Suite
-  
-Scenario: test
+Background:
 Given user launched browser and navigated to url
+Given connected to database
+  
+Scenario: User Login with valid credentials
+Given user logged in with valid credentials
+Given user logged in with valid credentials
+
+Scenario: user logged out successfully
+And User logged out successfully
 
 Scenario: teardown
 And tear down
 
-
-
-
-
+  
+  
