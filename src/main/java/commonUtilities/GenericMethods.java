@@ -72,7 +72,7 @@ public class GenericMethods extends AbstractPage{
 			driver.findElement(locator).isDisplayed();
 			feature.pass("Element is visible: " + log);
 		}catch(Exception e) {
-			Screenshot.logFail("Element NOT Visible:" + log,true,flag);
+			Screenshot.logFail("Element NOT Visible: " + log,true,flag);
 		}
 	}
 	

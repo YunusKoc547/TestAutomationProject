@@ -17,18 +17,24 @@
 ## (Comments)
 #Sample Feature Definition Template
 
-
-@login
-Feature: Login suite
+@HomePage
+Feature: Home Page Suite
 
 Background:
 Given user launched browser and navigated to url
-
-
-Scenario: Login with valid credentials
 Given connected to database
+
+Scenario Outline: Navigate to "<moduleName>" module
+Given user click All button
+Then user click on "<moduleName>" link
+Examples:
+| moduleName   |
+| Best Sellers |
+| New Releases |
+
+Scenario: Validate Back-to-top button functionality
 Given user logged in with valid credentials
+Then user scroll to Back-to-top button and click and validate
 
 Scenario: teardown
 And tear down
-

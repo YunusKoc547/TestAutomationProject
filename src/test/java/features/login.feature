@@ -18,42 +18,17 @@
 #Sample Feature Definition Template
 
 
-@Regression
-Feature: Navigate to Application and login
-  
+@login
+Feature: Login suite
+
 Background:
 Given user launched browser and navigated to url
 
-@login
-Scenario: User login with valid credentials
+
+Scenario: Login with valid credentials
 Given connected to database
 Given user logged in with valid credentials
 
-Scenario Outline: Navigate to "<moduleName>" module
-Given user click All button
-Then user click on "<moduleName>" link
-Examples:
-| moduleName   |
-| Best Sellers |
-| New Releases |
-
-@login
-Scenario: User login with valid credentials
-Given connected to database
-Given user logged in with valid credentials
-
-@scroll
-Scenario: Validate Back-to-top button functionality
-Given connected to database
-Given user logged in with valid credentials
-Then user scroll to Back-to-top button and click and validate
-
-
-@teardown @login @scroll
 Scenario: teardown
 And tear down
-
-
-
-
 

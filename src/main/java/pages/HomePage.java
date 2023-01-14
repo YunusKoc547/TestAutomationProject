@@ -20,7 +20,7 @@ public class HomePage extends AbstractPage{
 	By bestSellersLinkOnLeftPanel = By.xpath("//ul//a[text()='Best Sellers']");
 	By bestSellersTitle = By.xpath("//span[@id='zg_banner_text' and contains(text(),'Best Sellers')]");
 	By backToTopButton = By.xpath("//span[@class='navFooterBackToTopText']");
-	By amazonLogo = By.xpath("//a[@id='nav-logo-spritess']");
+	By amazonLogo = By.xpath("//a[@id='nav-logo-sprites']");
 	
 	public void clickOnAllDropdownButton() throws IOException, InterruptedException, ClassNotFoundException {	
 		genericMethods.clickElement(allDropdownButton,"\"All\" dropdown button",true);

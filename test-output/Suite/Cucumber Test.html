@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Cucumber Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>4/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Jan 08 20:55:43 EST 2023</td>
+<td>Started on:</td><td>Fri Jan 13 16:07:59 EST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>52 seconds (52571 ms)</td>
+<tr><td>Total time:</td><td>52 seconds (52958 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,36 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='runners.CucumberRunner.runScenario()'><b>runScenario</b><br>Test class: runners.CucumberRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Back-to-top button functionality", "Optional[Navigate to Application and login]"</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at commonUtilities.Screenshot.logFail(Screenshot.java:40)
-	at commonUtilities.GenericMethods.isDisplayed(GenericMethods.java:75)
-	at pages.HomePage.clickOnBackToTopButton(HomePage.java:45)
-	at stepdefinitions.Home_Stepdef.userScrollToBack_To_Top_ButtonAndClickAndValidate(Home_Stepdef.java:46)
-	at ?.user scroll to Back-to-top button and click and validate(file:///C:/Users/yunus/eclipse-AutomationProject/AutomationProject/src/test/java/features/login.feature:49)
-... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace908435478", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace908435478'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.failNotEquals(Assert.java:1037)
-	at org.testng.Assert.assertTrue(Assert.java:45)
-	at org.testng.Assert.assertTrue(Assert.java:55)
-	at commonUtilities.Screenshot.logFail(Screenshot.java:40)
-	at commonUtilities.GenericMethods.isDisplayed(GenericMethods.java:75)
-	at pages.HomePage.clickOnBackToTopButton(HomePage.java:45)
-	at stepdefinitions.Home_Stepdef.userScrollToBack_To_Top_ButtonAndClickAndValidate(Home_Stepdef.java:46)
-	at ?.user scroll to Back-to-top button and click and validate(file:///C:/Users/yunus/eclipse-AutomationProject/AutomationProject/src/test/java/features/login.feature:49)
-</pre></div></td>
-<td>50</td>
-<td>runners.CucumberRunner@27462a88</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -105,10 +75,25 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runners.CucumberRunner.runScenario()'><b>runScenario</b><br>Test class: runners.CucumberRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "teardown", "Optional[Navigate to Application and login]"</td>
+<td title='runners.CucumberRunnerHomePage.runScenario()'><b>runScenario</b><br>Test class: runners.CucumberRunnerHomePage<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Back-to-top button functionality", "Optional[Home Page Suite]"</td>
+<td></td>
+<td>3</td>
+<td>runners.CucumberRunnerHomePage@27462a88</td></tr>
+<tr>
+<td title='runners.CucumberRunnerHomePage.runScenario()'><b>runScenario</b><br>Test class: runners.CucumberRunnerHomePage<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Navigate to "Best Sellers" module", "Optional[Home Page Suite]"</td>
+<td></td>
+<td>25</td>
+<td>runners.CucumberRunnerHomePage@27462a88</td></tr>
+<tr>
+<td title='runners.CucumberRunnerHomePage.runScenario()'><b>runScenario</b><br>Test class: runners.CucumberRunnerHomePage<br>Test method: Runs Cucumber Scenarios<br>Parameters: "teardown", "Optional[Home Page Suite]"</td>
 <td></td>
 <td>1</td>
-<td>runners.CucumberRunner@27462a88</td></tr>
+<td>runners.CucumberRunnerHomePage@27462a88</td></tr>
+<tr>
+<td title='runners.CucumberRunnerHomePage.runScenario()'><b>runScenario</b><br>Test class: runners.CucumberRunnerHomePage<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Navigate to "New Releases" module", "Optional[Home Page Suite]"</td>
+<td></td>
+<td>22</td>
+<td>runners.CucumberRunnerHomePage@27462a88</td></tr>
 </table><p>
 </body>
 </html>

@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\yunus\eclipse-AutomationProject\AutomationProject\testSuites\Default.xml</span>
+                    <span>C:\Users\yunus\eclipse-AutomationProject\AutomationProject\testSuites\HomePageTests.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,21 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="runners.CucumberRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Validate Back-to-top button functionality&quot;, &quot;Optional[Navigate to Application and login]&quot;)">runScenario("Validate Back-to-top button functionality", "Optional[Navigate to Application and login]")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -118,7 +104,22 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="runners.CucumberRunner" class="method navigator-link" hash-for-method="runScenario(&quot;teardown&quot;, &quot;Optional[Navigate to Application and login]&quot;)">runScenario("teardown", "Optional[Navigate to Application and login]")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="runners.CucumberRunnerHomePage" class="method navigator-link" hash-for-method="runScenario(&quot;Validate Back-to-top button functionality&quot;, &quot;Optional[Home Page Suite]&quot;)">runScenario("Validate Back-to-top button functionality", "Optional[Home Page Suite]")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="runners.CucumberRunnerHomePage" class="method navigator-link" hash-for-method="runScenario(&quot;Navigate to &quot;Best Sellers&quot; module&quot;, &quot;Optional[Home Page Suite]&quot;)">runScenario("Navigate to "Best Sellers" module", "Optional[Home Page Suite]")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="runners.CucumberRunnerHomePage" class="method navigator-link" hash-for-method="runScenario(&quot;teardown&quot;, &quot;Optional[Home Page Suite]&quot;)">runScenario("teardown", "Optional[Home Page Suite]")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="runners.CucumberRunnerHomePage" class="method navigator-link" hash-for-method="runScenario(&quot;Navigate to &quot;New Releases&quot; module&quot;, &quot;Optional[Home Page Suite]&quot;)">runScenario("Navigate to "New Releases" module", "Optional[Home Page Suite]")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -133,44 +134,48 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
+          <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">runners.CucumberRunner</span>
+              <img src="passed.png"/>
+              <span class="class-name">runners.CucumberRunnerHomePage</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Validate Back-to-top button functionality&quot;, &quot;Optional[Navigate to Application and login]&quot;)">
-                  </a> <!-- runScenario("Validate Back-to-top button functionality", "Optional[Navigate to Application and login]") -->
+                  <a name="runScenario(&quot;Validate Back-to-top button functionality&quot;, &quot;Optional[Home Page Suite]&quot;)">
+                  </a> <!-- runScenario("Validate Back-to-top button functionality", "Optional[Home Page Suite]") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Validate Back-to-top button functionality", "Optional[Navigate to Application and login]")</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
-	at commonUtilities.Screenshot.logFail(Screenshot.java:40)
-	at commonUtilities.GenericMethods.isDisplayed(GenericMethods.java:75)
-	at pages.HomePage.clickOnBackToTopButton(HomePage.java:45)
-	at stepdefinitions.Home_Stepdef.userScrollToBack_To_Top_ButtonAndClickAndValidate(Home_Stepdef.java:46)
-	at ✽.user scroll to Back-to-top button and click and validate(file:///C:/Users/yunus/eclipse-AutomationProject/AutomationProject/src/test/java/features/login.feature:49)
-... Removed 4 stack frames
-</div> <!-- stack-trace -->
+                  <span class="parameters">("Validate Back-to-top button functionality", "Optional[Home Page Suite]")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">runners.CucumberRunner</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;teardown&quot;, &quot;Optional[Navigate to Application and login]&quot;)">
-                  </a> <!-- runScenario("teardown", "Optional[Navigate to Application and login]") -->
+                  <a name="runScenario(&quot;Navigate to &quot;Best Sellers&quot; module&quot;, &quot;Optional[Home Page Suite]&quot;)">
+                  </a> <!-- runScenario("Navigate to "Best Sellers" module", "Optional[Home Page Suite]") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("teardown", "Optional[Navigate to Application and login]")</span>
+                  <span class="parameters">("Navigate to "Best Sellers" module", "Optional[Home Page Suite]")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;teardown&quot;, &quot;Optional[Home Page Suite]&quot;)">
+                  </a> <!-- runScenario("teardown", "Optional[Home Page Suite]") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("teardown", "Optional[Home Page Suite]")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Navigate to &quot;New Releases&quot; module&quot;, &quot;Optional[Home Page Suite]&quot;)">
+                  </a> <!-- runScenario("Navigate to "New Releases" module", "Optional[Home Page Suite]") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Navigate to "New Releases" module", "Optional[Home Page Suite]")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -180,7 +185,7 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\yunus\eclipse-AutomationProject\AutomationProject\testSuites\Default.xml</span>
+            <span class="header-content">C:\Users\yunus\eclipse-AutomationProject\AutomationProject\testSuites\HomePageTests.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -189,7 +194,7 @@
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Cucumber Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;runners.CucumberRunner&quot;/&gt;
+      &lt;class name=&quot;runners.CucumberRunnerHomePage&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Cucumber Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -237,15 +242,23 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
-data.setCell(0, 2, 'runners.CucumberRunner')
-data.setCell(0, 3, 50536);
+data.setCell(0, 2, 'runners.CucumberRunnerHomePage')
+data.setCell(0, 3, 25449);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
-data.setCell(1, 2, 'runners.CucumberRunner')
-data.setCell(1, 3, 1741);
+data.setCell(1, 2, 'runners.CucumberRunnerHomePage')
+data.setCell(1, 3, 22444);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'runScenario')
+data.setCell(2, 2, 'runners.CucumberRunnerHomePage')
+data.setCell(2, 3, 3314);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'runScenario')
+data.setCell(3, 2, 'runners.CucumberRunnerHomePage')
+data.setCell(3, 3, 1456);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -276,24 +289,30 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">runners.CucumberRunner</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">runners.CucumberRunnerHomePage</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUpClass</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">runScenario("Validate Back-to-top button functionality", "Optional[Navigate to Application and login]")</span>
-                <span class="method-start">270 ms</span>
+                <span class="method-name">runScenario("Navigate to "Best Sellers" module", "Optional[Home Page Suite]")</span>
+                <span class="method-start">272 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">runScenario("teardown", "Optional[Navigate to Application and login]")</span>
-                <span class="method-start">50808 ms</span>
+                <span class="method-name">runScenario("Navigate to "New Releases" module", "Optional[Home Page Suite]")</span>
+                <span class="method-start">25723 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Validate Back-to-top button functionality", "Optional[Home Page Suite]")</span>
+                <span class="method-start">48168 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("teardown", "Optional[Home Page Suite]")</span>
+                <span class="method-start">51483 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">52550 ms</span>
+                <span class="method-start">52940 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
