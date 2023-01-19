@@ -44,7 +44,7 @@ public class AbstractPage {
 	GenericMethods genericMethods;
 	JavascriptExecutor je;
 
-	public void initialize() throws IOException, InterruptedException, ClassNotFoundException {	
+	public  void initialize() throws IOException, InterruptedException, ClassNotFoundException {	
 		genericMethods = new GenericMethods();
 			    					
 		
