@@ -11,6 +11,7 @@ import commonUtilities.GenericMethods;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import managers.PageObjectManager;
 import pages.HomePage;
 
@@ -30,6 +31,17 @@ public class Home_Stepdef extends AbstractPage{
 			initialize();
 		}
 	}
+	
+	@Given("user navigates to home page")
+	public void userNavigateToHomePage() throws IOException, InterruptedException {
+		homePage.navigateToHomePage();
+	}
+	
+	@When("user navigates to Reaction Time module")
+	public void userNavigatesToReactionTimeModule() throws IOException, InterruptedException {
+		homePage.navigateToReactionTimeModule();
+	}
+	
 	
 		
 	@And("tear down")

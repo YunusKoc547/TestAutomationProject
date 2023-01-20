@@ -17,26 +17,20 @@
 ## (Comments)
 #Sample Feature Definition Template
 
-@login
-Feature: Login Suite
+#//div[@class='css-o34a3t e19owgy75']//a[text()='HUMAN BENCHMARK']
+@home
+Feature: Home Suite
 
-Background:
-Given user launched browser and navigated to url
-  
-Scenario: User Login with valid credentials
+	Background:
+		Given user launched browser and navigated to url
+
+Scenario: Navigate to Reaction Time module
 Given user logged in with valid credentials
-
-Scenario: User Login with valid credentials2
-Given user logged in with valid credentials
-
-Scenario: user logged out successfully
-And User logged out successfully
-
-Scenario: user logged out successfully2
-And User logged out successfully
+When user navigates to home page
+Then user navigates to Reaction Time module
 
 Scenario: teardown
-And tear down
+Given tear down
 
-  
+
   

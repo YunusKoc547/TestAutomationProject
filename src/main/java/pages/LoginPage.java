@@ -27,7 +27,7 @@ public class LoginPage extends AbstractPage{
 //		DatabaseMethods.emailAndPasswordPair();
 	}
 	
-	public void loginWithValidCredentials() throws SQLException, IOException, InterruptedException { //genericMethods.isDisplayed(userAccountInfoUnlogged)
+	public void loginWithValidCredentials() throws SQLException, IOException, InterruptedException, ClassNotFoundException { //genericMethods.isDisplayed(userAccountInfoUnlogged)
 
 //		try {
 //			if(genericMethods.isDisplayed(userAccountInfoUnlogged)); 
@@ -42,9 +42,21 @@ public class LoginPage extends AbstractPage{
 //				}
 //			}
 		
+		connectToDatabase();
+		
 		try {
-			if(genericMethods.isDisplayed(logoutButton));
+			if(genericMethods.isDisplayed(loginButton));
 		}catch(Exception e) {
+			try {
+				if(genericMethods.isDisplayed(logoutButton)) {
+					feature.info("a user is already logged in");
+					return;
+				}
+			}catch(Exception t) {
+				Screenshot.logFail("ERROR: Sign in button not displayed", true,true);
+			}	
+		}
+		
 			String email = DatabaseMethods.userInformation()[0];
 			String password = DatabaseMethods.userInformation()[1];
 			String firstName = DatabaseMethods.userInformation()[2];
@@ -62,14 +74,24 @@ public class LoginPage extends AbstractPage{
 			genericMethods.clickElement(loginButtonOnLoginPage, "Login button", true);
 			
 			genericMethods.isDisplayed(username, "username:  " + DatabaseMethods.userInformation()[2] + " " + DatabaseMethods.userInformation()[3], true);
-			return;
-		}
-		
-		feature.info("a user is already logged in");
-		
+			
 	}
 	
 	public void logout() throws IOException, InterruptedException {
+		
+		try {
+			if(genericMethods.isDisplayed(logoutButton));
+		}catch(Exception e) {
+			try {
+				if(genericMethods.isDisplayed(loginButton)) {
+					feature.info("no user is currently logged in");
+					return;
+				}
+			}catch(Exception t) {
+				Screenshot.logFail("ERROR: Logout button not displayed", true, true);
+			}
+		}
+
 		genericMethods.clickElement(logoutButton, "Logout button", true);
 		genericMethods.isDisplayed(loginButton);
 		feature.pass("user logged out successfully");

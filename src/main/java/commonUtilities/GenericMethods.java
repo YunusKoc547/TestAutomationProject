@@ -132,5 +132,14 @@ public class GenericMethods extends AbstractPage{
 		}
 	}
 	
+	public String getText(By locator) throws IOException, InterruptedException {
+		try {
+			return driver.findElement(locator).getText();
+		}catch(Exception e) {
+			Screenshot.logFail("ERROR: could not get text from: " + locator, true, true);
+			return null;
+		}
+	}
+	
 	
 }
