@@ -10,7 +10,6 @@ import pages.ReactionTimeTestPage;
 public class ReactionTimeTest_Stepdef {
 
 	ReactionTimeTestPage reactionTimeTestPage = new ReactionTimeTestPage();
-	GenericMethods genericMethods = new GenericMethods();
 	
 	@When("user starts Reaction Time Test")
 	public void userStartsReactionTimeTest() throws IOException, InterruptedException {

@@ -11,10 +11,7 @@ import org.openqa.selenium.WebElement;
 import commonUtilities.AbstractPage;
 import commonUtilities.GenericMethods;
 
-public class HomePage extends AbstractPage{
-
-	GenericMethods genericMethods = new GenericMethods();
-	
+public class HomePage extends AbstractPage{	
 	
 	By humanBenchMarkModule = By.xpath("//div[@class='css-o34a3t e19owgy75']//a[text()='HUMAN BENCHMARK']");
 	

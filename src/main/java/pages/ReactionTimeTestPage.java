@@ -11,9 +11,6 @@ import commonUtilities.GenericMethods;
 
 public class ReactionTimeTestPage extends AbstractPage{
 
-	
-	GenericMethods genericMethods = new GenericMethods();
-	
 	By reactionTimeTestStart = By.xpath("//div[@class='view-splash e18o0sx0 css-saet2v e19owgy77']");
 	By redScreen = By.xpath("view-waiting e18o0sx0 css-saet2v e19owgy77");
 	By waitForGreenMessage = By.xpath("//div[text()='Wait for green']");

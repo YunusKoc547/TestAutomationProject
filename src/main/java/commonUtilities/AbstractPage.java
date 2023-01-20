@@ -41,11 +41,12 @@ public class AbstractPage {
 	
 //	static Scenario scenario = new Scenario();
 	 
-	GenericMethods genericMethods;
-	JavascriptExecutor je;
+	public static GenericMethods genericMethods;
+	public static JavascriptExecutor je;
 
 	public void initialize() throws IOException, InterruptedException, ClassNotFoundException {	
 		genericMethods = new GenericMethods();
+		je = (JavascriptExecutor) driver;
 			    					
 		
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MMddHHmm");  
@@ -99,6 +100,11 @@ public class AbstractPage {
 		
 		genericMethods.navigateTo(prop.getProperty("url"), prop.getProperty("url"), true);
 				
+	}
+
+	public GenericMethods genericMethods() {
+		// TODO Auto-generated method stub
+		return this.genericMethods();
 	}
 }
 

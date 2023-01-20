@@ -13,12 +13,8 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 
-
-
-
 public class GenericMethods extends AbstractPage{
-	
-	
+
 	
 	public void clickElement(By locator, String log, boolean flag) throws IOException, InterruptedException {
 		
@@ -120,7 +116,7 @@ public class GenericMethods extends AbstractPage{
 	}
 	
 	public void scrollIntoView(By locator, String field) throws IOException, InterruptedException {
-		je = (JavascriptExecutor) driver;
+//		je = (JavascriptExecutor) driver;
 		
 		try {
 			WebElement element = driver.findElement(By.xpath("//span[@class='navFooterBackToTopText']"));

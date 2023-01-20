@@ -12,9 +12,6 @@ import commonUtilities.Screenshot;
 
 public class LoginPage extends AbstractPage{
 	
-	GenericMethods genericMethods = new GenericMethods();
-
-	
 	By loginButton = By.xpath("//div[@class='user-nav']//a[text()='LOGIN']");
 	By usernameTextbox = By.xpath("//input[@name='username']");
 	By passwordTextbox = By.xpath("//input[@name='password']");
