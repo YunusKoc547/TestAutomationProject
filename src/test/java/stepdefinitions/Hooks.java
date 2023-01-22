@@ -39,6 +39,7 @@ public class Hooks extends AbstractPage{
 				feature = extent.createTest(new GherkinKeyword("Feature"), getname);
 			}else {
 				feature = extent.createTest(new GherkinKeyword("Feature"), "Test End");
+				extent.flush();
 			}
 		 
 					

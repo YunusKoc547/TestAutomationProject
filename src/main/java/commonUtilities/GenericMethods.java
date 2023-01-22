@@ -48,7 +48,7 @@ public class GenericMethods extends AbstractPage{
 	}
 	
 	public void tearDown() throws SQLException {
-		extent.flush();
+//		extent.flush();
 //		extent.removeTest("Automation Execution report");
 		driver.close();
 		

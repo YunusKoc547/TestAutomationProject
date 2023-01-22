@@ -42,6 +42,11 @@ public class Home_Stepdef extends AbstractPage{
 		homePage.navigateToReactionTimeModule();
 	}
 	
+	@When("user navigates to Aim Trainer module")
+	public void userNavigatesToAimTestModule() throws IOException, InterruptedException {
+		homePage.navigateToAimTrainerModule();
+	}
+	
 	
 		
 	@And("tear down")

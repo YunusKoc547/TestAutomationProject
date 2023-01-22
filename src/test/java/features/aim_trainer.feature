@@ -17,20 +17,20 @@
 ## (Comments)
 #Sample Feature Definition Template
 
-#//div[@class='css-o34a3t e19owgy75']//a[text()='HUMAN BENCHMARK']
-@home
-Feature: Home Suite
+@AimTrainer
+Feature: Aim Trainer
 
 Background:
 Given user launched browser and navigated to url
-
-Scenario: Navigate to Reaction Time module
 Given user logged in with valid credentials
+
+Scenario: t1
 When user navigates to home page
-Then user navigates to Reaction Time module
+When user navigates to Aim Trainer module
 
 Scenario: teardown
-Given tear down
+And tear down
 
 
-  
+
+

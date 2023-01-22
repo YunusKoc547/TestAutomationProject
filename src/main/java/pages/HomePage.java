@@ -17,7 +17,12 @@ public class HomePage extends AbstractPage{
 	
 	// Reaction Time module locators
 	By reactionTimeModuleHeader = By.xpath("//h1[text()='Reaction Time Test']");
-	By reactionTimeModule = By.xpath("//a[@class='css-uaat4j e19owgy72']//h3[text()='Reaction Time']");
+	By reactionTimeModule = By.xpath("//a//h3[text()='Reaction Time']");
+	
+	// Aim Test module locators
+	By aimTrainerModule = By.xpath("//a//h3[text()='Aim Trainer']");
+	By aimTrainerModuleTitle = By.xpath("//h2[text()='Aim Trainer']");
+	
 	
 	public void navigateToReactionTimeModule() throws IOException, InterruptedException {
 		genericMethods.clickElement(reactionTimeModule,"Reaction Time module",true);
@@ -26,6 +31,11 @@ public class HomePage extends AbstractPage{
 	
 	public void navigateToHomePage() throws IOException, InterruptedException {
 		genericMethods.clickElement(humanBenchMarkModule, "HUMAN BENCHMARK module", true);
+	}
+	
+	public void navigateToAimTrainerModule() throws IOException, InterruptedException {
+		genericMethods.clickElement(aimTrainerModule, "Aim Trainer module", true);
+		genericMethods.isDisplayed(aimTrainerModuleTitle, "Aim Trainer page", true);
 	}
 	
 

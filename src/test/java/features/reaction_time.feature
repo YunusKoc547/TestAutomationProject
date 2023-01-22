@@ -22,16 +22,15 @@ Feature: Reaction Time
 
 Background:
 Given user launched browser and navigated to url
-
-Scenario: Complete Reaction Time Test
 Given user logged in with valid credentials
 Given user navigates to home page
 When user navigates to Reaction Time module
+
+Scenario: Complete Reaction Time Test
 When user starts Reaction Time Test
 Then user clicks when screen turns green
 
 Scenario: Validate Clicked Too Soon message
-When user navigates to Reaction Time module
 When user starts Reaction Time Test
 Then user clicks while screen is still red
 
