@@ -20,9 +20,7 @@ import net.bytebuddy.implementation.bind.annotation.Super;
 //import cucumber.api.java.After;
 
 public class Hooks extends AbstractPage{
-	
-	GenericMethods genericMethods = new GenericMethods();
-	
+		
 	 @Before
 	 public void before(Scenario scenario) throws ClassNotFoundException {
 			 

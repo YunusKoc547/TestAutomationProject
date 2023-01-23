@@ -8,13 +8,21 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 
 public class GenericMethods extends AbstractPage{
 
+	public void clickElementUsingActionClass(By locator, String log, boolean flag) throws IOException, InterruptedException {
+		WebElement locatorWebElement = driver.findElement(locator);
+		try {
+			action.moveToElement(locatorWebElement).click().perform();
+			feature.pass("Click Element: " + log);
+		}catch(Exception e) {
+			Screenshot.logFail("ERROR: Could not click: " + log,true,flag);
+		}
+	}
 	
 	public void clickElement(By locator, String log, boolean flag) throws IOException, InterruptedException {
 		

@@ -15,6 +15,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -43,10 +45,10 @@ public class AbstractPage {
 	 
 	public static GenericMethods genericMethods;
 	public static JavascriptExecutor je;
+	public static Actions action;
 
 	public void initialize() throws IOException, InterruptedException, ClassNotFoundException {	
 		genericMethods = new GenericMethods();
-		je = (JavascriptExecutor) driver;
 			    					
 		
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MMddHHmm");  
@@ -95,6 +97,9 @@ public class AbstractPage {
 		}catch(NullPointerException e) {
 			e.printStackTrace();
 		}
+		
+		action = new Actions(driver);
+		je = (JavascriptExecutor) driver;
 
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		

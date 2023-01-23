@@ -24,9 +24,12 @@ Background:
 Given user launched browser and navigated to url
 Given user logged in with valid credentials
 
-Scenario: t1
+Scenario: Complete Aim Trainer test
 When user navigates to home page
 When user navigates to Aim Trainer module
+And user starts Aim Trainer test
+Then user completes Aim Trainer test
+
 
 Scenario: teardown
 And tear down

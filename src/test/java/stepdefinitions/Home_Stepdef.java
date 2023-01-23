@@ -20,7 +20,6 @@ public class Home_Stepdef extends AbstractPage{
 
 	PageObjectManager pageObjectManager;
 	HomePage homePage = new HomePage();
-	GenericMethods genericMethods = new GenericMethods();
 	
 	@Given("user launched browser and navigated to url")
 	public void userLaunchedBrowser() throws IOException, InterruptedException, ClassNotFoundException {

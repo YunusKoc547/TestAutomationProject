@@ -28,23 +28,7 @@ Given user launched browser and navigated to url
 Scenario: User Login with valid credentials
 Given user logged in with valid credentials
 
-Scenario: User Login with valid credentials2
-Given user logged in with valid credentials
-
-Scenario: user logged out successfully
-And User logged out successfully
-
-Scenario: user logged out successfully2
-And User logged out successfully
-
-Scenario: Navigate to Reaction Time module
-Given user logged in with valid credentials
-When user navigates to home page
-Then user navigates to Reaction Time module
-
 Scenario: Complete Reaction Time Test
-Given user logged in with valid credentials
-Given user navigates to home page
 When user navigates to Reaction Time module
 When user starts Reaction Time Test
 Then user clicks when screen turns green
@@ -52,6 +36,15 @@ Then user clicks when screen turns green
 Scenario: Validate Clicked Too Soon message
 When user navigates to Reaction Time module
 When user starts Reaction Time Test
+Then user clicks while screen is still red
+
+Scenario: Complete Aim Trainer test
+When user navigates to Aim Trainer module
+And user starts Aim Trainer test
+Then user completes Aim Trainer test
+
+Scenario: user logged out successfully
+And User logged out successfully
 
 Scenario: teardown
 Given tear down
