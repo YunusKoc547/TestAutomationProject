@@ -21,4 +21,14 @@ public class SequenceMemory_Stepdef extends AbstractPage{
 	public void userCompleteSequenceMemoryTest() throws IOException, InterruptedException {
 		sequenceMemoryPage.completeSequenceMemoryTest();
 	}
+	
+	@And("user fail Sequence Memory Test")
+	public void userFailSequenceMemoryTest() throws IOException, InterruptedException {
+		sequenceMemoryPage.failSequenceMemoryTest();
+	}
+	
+	@Then("user click try again button")
+	public void userClickTryAgainButton( ) {
+		
+	}
 }

@@ -16,16 +16,20 @@ public class HomePage extends AbstractPage{
 	By humanBenchMarkModule = By.xpath("//div[@class='css-o34a3t e19owgy75']//a[text()='HUMAN BENCHMARK']");
 	
 	// Reaction Time module locators
-	By reactionTimeModuleHeader = By.xpath("//h1[text()='Reaction Time Test']");
 	By reactionTimeModule = By.xpath("//a//h3[text()='Reaction Time']");
+	By reactionTimeModuleHeader = By.xpath("//h1[text()='Reaction Time Test']");
 	
 	// Aim Trainer module locators
 	By aimTrainerModule = By.xpath("//a//h3[text()='Aim Trainer']");
-	By aimTrainerModuleTitle = By.xpath("//h2[text()='Aim Trainer']");
+	By aimTrainerPageHeader = By.xpath("//h2[text()='Aim Trainer']");
 	
 	// Sequence Memory module locators
-	By sequenceMemory = By.xpath("//a//h3[text()='Sequence Memory']");
-	By sequenceMemoryHeader = By.xpath("//h1[text()='Sequence Memory Test']");
+	By sequenceMemoryModule = By.xpath("//a//h3[text()='Sequence Memory']");
+	By sequenceMemoryPageHeader = By.xpath("//h1[text()='Sequence Memory Test']");
+	
+	// Number Memory module locators
+	By numberMemoryModule = By.xpath("//a//h3[text()='Number Memory']");
+	By numberMemoryModuleHeader = By.xpath("//h1[text()='Number Memory']");
 			
 	
 	
@@ -40,12 +44,17 @@ public class HomePage extends AbstractPage{
 	
 	public void navigateToAimTrainerModule() throws IOException, InterruptedException {
 		genericMethods.clickElement(aimTrainerModule, "Aim Trainer module", true);
-		genericMethods.isDisplayed(aimTrainerModuleTitle, "Aim Trainer page", true);
+		genericMethods.isDisplayed(aimTrainerPageHeader, "Aim Trainer page", true);
 	}
 	
 	public void navigateToSequenceMemoryModule() throws IOException, InterruptedException {
-		genericMethods.clickElement(sequenceMemory, "Sequence Memory module", true);
-		genericMethods.isDisplayed(sequenceMemoryHeader,"Sequence Memory Test",true);
+		genericMethods.clickElement(sequenceMemoryModule, "Sequence Memory module", true);
+		genericMethods.isDisplayed(sequenceMemoryPageHeader,"Sequence Memory Test",true);
+	}
+	
+	public void navigateToNumberMemoryModule() throws IOException, InterruptedException {
+		genericMethods.clickElement(numberMemoryModule, "Number Memory module", true);
+		genericMethods.isDisplayed(numberMemoryModuleHeader,"Number Memory Test",true);
 	}
 	
 

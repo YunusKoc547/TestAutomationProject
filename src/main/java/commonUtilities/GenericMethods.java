@@ -36,6 +36,16 @@ public class GenericMethods extends AbstractPage{
 		}	
 	}
 	
+	public void clickElement(WebElement locator, String log, boolean flag) throws IOException, InterruptedException {
+		
+		try {
+			locator.click();
+			feature.pass("Click Element: " + log);
+		}catch(Exception e) {
+			Screenshot.logFail("ERROR: Could not click: " + log,true,flag);
+		}	
+	}
+	
 	public void clickElement(By locator, boolean flag) throws IOException, InterruptedException {
 		
 		try {
@@ -115,6 +125,14 @@ public class GenericMethods extends AbstractPage{
 		}
 	}
 	
+	public void setInputValue(By locator,String keys,boolean flag) throws IOException, InterruptedException {
+		try {
+			driver.findElement(locator).sendKeys(keys);
+		}catch(Exception e) {
+			Screenshot.logFail("ERROR: Could not enter \"" + keys + "\"",true,flag);
+		}
+	}
+	
 	public void setInputValue(By locator,String keys, String field,boolean flag, boolean isPassword) throws IOException, InterruptedException {
 		try {
 			driver.findElement(locator).sendKeys(keys);
@@ -156,17 +174,24 @@ public class GenericMethods extends AbstractPage{
 		}
 	}
 	
+//	public <T> List<T> getList(By locator) {
+//		
+//		List<T> list = new ArrayList<T>();
+//		list.add(null)
+//		
+//		return list;
+//	}
+	
 	public List<String> getListOfText(By locator) {
 		
 		List<String> res = new ArrayList<>();
-		
 		
 		try {
 			for (int i = 0; i < driver.findElements(locator).size(); i++) {
 				res.add(driver.findElements(locator).get(i).getText());
 			}
 		}catch(Exception e) {
-			feature.fail("ERROR: COULD NOT FIND XPATH: " + locator);
+			feature.fail("ERROR: COULD NOT FIND PATH: " + locator);
 		}
 		
 		return res;

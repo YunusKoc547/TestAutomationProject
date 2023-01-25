@@ -17,6 +17,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -46,6 +47,7 @@ public class AbstractPage {
 	public static GenericMethods genericMethods;
 	public static JavascriptExecutor je;
 	public static Actions action;
+	public static WebDriverWait wait;
 
 	public void initialize() throws IOException, InterruptedException, ClassNotFoundException {	
 		genericMethods = new GenericMethods();
@@ -100,6 +102,7 @@ public class AbstractPage {
 		
 		action = new Actions(driver);
 		je = (JavascriptExecutor) driver;
+		wait = new WebDriverWait(driver,60);
 
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		

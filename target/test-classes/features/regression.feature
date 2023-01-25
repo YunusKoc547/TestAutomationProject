@@ -24,7 +24,6 @@ Feature: Regression Suite
 Background: 
 Given user launched browser and navigated to url
 
-
 Scenario: User Login with valid credentials
 Given user logged in with valid credentials
 
@@ -42,6 +41,22 @@ Scenario: Complete Aim Trainer test
 When user navigates to Aim Trainer module
 And user starts Aim Trainer test
 Then user completes Aim Trainer test
+
+Scenario: Complete Sequence Memory Test
+When user navigates to Sequence Memory module
+And user starts Sequence Memory Test
+Then user complete Sequence Memory Test
+
+Scenario: Fail Sequence Memory Test and validate
+When user navigates to Sequence Memory module
+And user starts Sequence Memory Test
+Then user fail Sequence Memory Test
+
+Scenario: Click Try again button and validate
+When user navigates to Sequence Memory module
+And user starts Sequence Memory Test
+Then user fail Sequence Memory Test
+Then user click try again button
 
 Scenario: user logged out successfully
 And User logged out successfully

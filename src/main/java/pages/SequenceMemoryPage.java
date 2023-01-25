@@ -22,6 +22,10 @@ public class SequenceMemoryPage extends AbstractPage{
 	By squares = By.xpath("//div[@class='square']");
 	By activeSquares = By.xpath("//div[@class='square active']");
 	By levelLocator = By.xpath("//span[@class='css-dd6wi1']//span[2]");
+	By tryAgainButton = By.xpath("//button[text()='Try again']");
+	By postGameText = By.xpath("//p[text()='Save your score to see how you compare.']");
+	
+	WebDriverWait wait = new WebDriverWait(driver, 10);
 	
 	
 	public void startSequenceMemoryTest() throws IOException, InterruptedException {	
@@ -30,7 +34,7 @@ public class SequenceMemoryPage extends AbstractPage{
 	}
 	
 	public void completeSequenceMemoryTest() throws IOException, InterruptedException {	
-		WebDriverWait wait = new WebDriverWait(driver, 10);
+		
 		
 		try {
 			List<WebElement> list = driver.findElements(squares);
@@ -39,7 +43,6 @@ public class SequenceMemoryPage extends AbstractPage{
 			
 			int index = 0;
 			int count = 0;
-			int test = 1;
 			int levelNumber = 10;
 			for (int j = 0; j < levelNumber; j++) {
 					
@@ -52,17 +55,14 @@ public class SequenceMemoryPage extends AbstractPage{
 						wait.until(ExpectedConditions.attributeToBe(list.get(i), "class", "square"));
 						i = -1;
 						index++;
-						if(index == currentLevel) break;
-						
+						if(index == currentLevel) break;					
 					}
 				}	
 				
 				System.out.println("Level: " + currentLevel);
 				System.out.println("index: " + index);
 			
-		
 				System.out.println("List for test " + test + ": " + listInt);
-				test++;
 				wait.until(ExpectedConditions.elementToBeClickable(squares));
 				Thread.sleep(1000); // SQUARES ARE CLICKABLE BEFORE CLICKS CAN BE REGISTERED, WAIT IS REQUIRED
 				while(count < listInt.size()) {
@@ -79,5 +79,31 @@ public class SequenceMemoryPage extends AbstractPage{
 		}catch(Exception e) {
 			Screenshot.logFail("ERROR: Failed to complete Sequence Memory Test", true, true);
 		}
+	}
+	
+	public void failSequenceMemoryTest() throws IOException, InterruptedException {
+		List<WebElement> list = driver.findElements(squares);
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(activeSquares));
+		
+		try {
+			if(list.get(0).getAttribute("class").equals("square active")) {
+				wait.until(ExpectedConditions.elementToBeClickable(squares));
+				Thread.sleep(1000); // SQUARES ARE CLICKABLE BEFORE CLICKS CAN BE REGISTERED, WAIT IS REQUIRED
+				genericMethods.clickElement(list.get(1), "Incorrect Square",true);
+				genericMethods.isDisplayed(postGameText,"Sequence Memory Test end",true);
+			}else {
+				wait.until(ExpectedConditions.elementToBeClickable(squares));
+				Thread.sleep(1000); // SQUARES ARE CLICKABLE BEFORE CLICKS CAN BE REGISTERED, WAIT IS REQUIRED
+				genericMethods.clickElement(list.get(0), "Incorrect Square",true);
+				genericMethods.isDisplayed(postGameText,"Sequence Memory Test end",true);
+			}
+		}catch(Exception e) {
+			Screenshot.logFail("ERROR: Failed to click on an Incorrect Square", true, true);
+		}
+	}
+	
+	public void clickTryAgainButton() throws IOException, InterruptedException {
+		genericMethods.clickElement(tryAgainButton,"Try again button",true);
+		genericMethods.isDisplayed(startButton,"Start button",true);	
 	}
 }

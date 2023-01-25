@@ -17,29 +17,24 @@
 ## (Comments)
 #Sample Feature Definition Template
 
-@SequenceMemory
-Feature: Sequence Memory
+@NumberMemory
+Feature: Number Memory
 
 Background:
 Given user launched browser and navigated to url
 
-Scenario: Complete Sequence Memory Test
+Scenario: Complete Number Memory Test
 Given user logged in with valid credentials
 When user navigates to home page
-When user navigates to Sequence Memory module
-And user starts Sequence Memory Test
-Then user complete Sequence Memory Test
+When user navigates to Number Memory module
+And user starts Number Memory Test
+Then user completes Number Memory Test
 
-Scenario: Fail Sequence Memory Test and validate
-When user navigates to Sequence Memory module
-And user starts Sequence Memory Test
-Then user fail Sequence Memory Test
-
-Scenario: Complete Sequence Memory Test then click Try again button and validate
-When user navigates to Sequence Memory module
-And user starts Sequence Memory Test
-Then user fail Sequence Memory Test
-Then user click try again button
+Scenario: Fail Number Memory Test and validate
+When user navigates to home page
+When user navigates to Number Memory module
+And user starts Number Memory Test
+Then user fails Number Memory Test
 
 Scenario: teardown
 And tear down
