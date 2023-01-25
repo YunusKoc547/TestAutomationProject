@@ -46,7 +46,10 @@ public class Home_Stepdef extends AbstractPage{
 		homePage.navigateToAimTrainerModule();
 	}
 	
-	
+	@When("user navigates to Sequence Memory module")
+	public void userNavigatesToSequenceMemoryModule() throws IOException, InterruptedException {
+		homePage.navigateToSequenceMemoryModule();
+	}
 		
 	@And("tear down")
 	public void tearDown() throws SQLException {

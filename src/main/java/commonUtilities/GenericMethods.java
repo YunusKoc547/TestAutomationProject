@@ -6,6 +6,8 @@ import java.io.IOException;
 
 
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -31,6 +33,15 @@ public class GenericMethods extends AbstractPage{
 			feature.pass("Click Element: " + log);
 		}catch(Exception e) {
 			Screenshot.logFail("ERROR: Could not click: " + log,true,flag);
+		}	
+	}
+	
+	public void clickElement(By locator, boolean flag) throws IOException, InterruptedException {
+		
+		try {
+			driver.findElement(locator).click();
+		}catch(Exception e) {
+			Screenshot.logFail("UNEXPECTED ERROR WHILE CLICKING",true,flag);
 		}	
 	}
 
@@ -143,6 +154,22 @@ public class GenericMethods extends AbstractPage{
 			Screenshot.logFail("ERROR: could not get text from: " + locator, true, true);
 			return null;
 		}
+	}
+	
+	public List<String> getListOfText(By locator) {
+		
+		List<String> res = new ArrayList<>();
+		
+		
+		try {
+			for (int i = 0; i < driver.findElements(locator).size(); i++) {
+				res.add(driver.findElements(locator).get(i).getText());
+			}
+		}catch(Exception e) {
+			feature.fail("ERROR: COULD NOT FIND XPATH: " + locator);
+		}
+		
+		return res;
 	}
 	
 	

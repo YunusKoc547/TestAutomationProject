@@ -17,26 +17,22 @@
 ## (Comments)
 #Sample Feature Definition Template
 
-@login
-Feature: Login Suite
+@SequenceMemory
+Feature: Sequence Memory
 
 Background:
 Given user launched browser and navigated to url
-  
-Scenario: User Login with valid credentialss
 Given user logged in with valid credentials
 
-Scenario: User Login with valid credentials2
-Given user logged in with valid credentials
-
-Scenario: user logged out successfully
-And User logged out successfully
-
-Scenario: user logged out successfully2
-And User logged out successfully
+Scenario: Complete Sequence Memory Test
+When user navigates to home page
+When user navigates to Sequence Memory module
+And user starts Sequence Memory Test
+Then user complete Sequence Memory Test
 
 Scenario: teardown
 And tear down
 
-  
-  
+
+
+

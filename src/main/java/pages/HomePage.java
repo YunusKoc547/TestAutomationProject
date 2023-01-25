@@ -19,9 +19,14 @@ public class HomePage extends AbstractPage{
 	By reactionTimeModuleHeader = By.xpath("//h1[text()='Reaction Time Test']");
 	By reactionTimeModule = By.xpath("//a//h3[text()='Reaction Time']");
 	
-	// Aim Test module locators
+	// Aim Trainer module locators
 	By aimTrainerModule = By.xpath("//a//h3[text()='Aim Trainer']");
 	By aimTrainerModuleTitle = By.xpath("//h2[text()='Aim Trainer']");
+	
+	// Sequence Memory module locators
+	By sequenceMemory = By.xpath("//a//h3[text()='Sequence Memory']");
+	By sequenceMemoryHeader = By.xpath("//h1[text()='Sequence Memory Test']");
+			
 	
 	
 	public void navigateToReactionTimeModule() throws IOException, InterruptedException {
@@ -36,6 +41,11 @@ public class HomePage extends AbstractPage{
 	public void navigateToAimTrainerModule() throws IOException, InterruptedException {
 		genericMethods.clickElement(aimTrainerModule, "Aim Trainer module", true);
 		genericMethods.isDisplayed(aimTrainerModuleTitle, "Aim Trainer page", true);
+	}
+	
+	public void navigateToSequenceMemoryModule() throws IOException, InterruptedException {
+		genericMethods.clickElement(sequenceMemory, "Sequence Memory module", true);
+		genericMethods.isDisplayed(sequenceMemoryHeader,"Sequence Memory Test",true);
 	}
 	
 
