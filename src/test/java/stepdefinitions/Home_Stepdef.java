@@ -36,6 +36,11 @@ public class Home_Stepdef extends AbstractPage{
 		homePage.navigateToHomePage();
 	}
 	
+	@When("user navigates to {string} module")
+	public void userNavigatesToModule(String module) throws IOException, InterruptedException {
+		homePage.navigateToModule(module);
+	}
+	
 	@When("user navigates to Reaction Time module")
 	public void userNavigatesToReactionTimeModule() throws IOException, InterruptedException {
 		homePage.navigateToReactionTimeModule();

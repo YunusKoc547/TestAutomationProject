@@ -28,35 +28,59 @@ Scenario: User Login with valid credentials
 Given user logged in with valid credentials
 
 Scenario: Complete Reaction Time Test
-When user navigates to Reaction Time module
+When user navigates to "Reaction Time" module
 When user starts Reaction Time Test
 Then user clicks when screen turns green
 
-Scenario: Validate Clicked Too Soon message
-When user navigates to Reaction Time module
+Scenario: Start Reaction Time Test and Validate Clicked Too Soon message
+When user navigates to "Reaction Time" module
 When user starts Reaction Time Test
 Then user clicks while screen is still red
 
 Scenario: Complete Aim Trainer test
-When user navigates to Aim Trainer module
+When user navigates to "Aim Trainer" module
 And user starts Aim Trainer test
 Then user completes Aim Trainer test
 
 Scenario: Complete Sequence Memory Test
-When user navigates to Sequence Memory module
+When user navigates to "Sequence Memory" module
 And user starts Sequence Memory Test
 Then user complete Sequence Memory Test
 
 Scenario: Fail Sequence Memory Test and validate
-When user navigates to Sequence Memory module
+When user navigates to "Sequence Memory" module
 And user starts Sequence Memory Test
 Then user fail Sequence Memory Test
 
-Scenario: Click Try again button and validate
-When user navigates to Sequence Memory module
+Scenario: Fail Sequence Memory Test and click Try again button and validate
+When user navigates to "Sequence Memory" module
 And user starts Sequence Memory Test
 Then user fail Sequence Memory Test
 Then user click try again button
+
+Scenario: Complete Number Memory Test
+When user navigates to "Number Memory" module
+And user starts Number Memory Test
+Then user completes Number Memory Test
+
+Scenario: Fail Number Memory Test and validate
+When user navigates to "Number Memory" module
+And user starts Number Memory Test
+Then user fails Number Memory Test
+
+Scenario: Start Verbal Memory Test
+When user navigates to "Verbal Memory" module
+And user starts Verbal Memory Test
+
+Scenario: Complete Verbal Memory Test
+When user navigates to "Verbal Memory" module
+And user starts Verbal Memory Test
+Then user complete Verbal Memory Test
+
+Scenario: Start then fail Verbal Memory Test
+When user navigates to "Verbal Memory" module
+And user starts Verbal Memory Test
+Then user fail Verbal Memory Test
 
 Scenario: user logged out successfully
 And User logged out successfully

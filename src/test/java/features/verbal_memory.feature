@@ -17,19 +17,26 @@
 ## (Comments)
 #Sample Feature Definition Template
 
-@AimTrainer
-Feature: Aim Trainer
+@VerbalMemory
+Feature: Verbal Memory
 
 Background:
 Given user launched browser and navigated to url
-Given user logged in with valid credentials
 
-Scenario: Complete Aim Trainer test
+Scenario: Start Verbal Memory Test
 When user navigates to home page
-When user navigates to "Aim Trainer" module
-And user starts Aim Trainer test
-Then user completes Aim Trainer test
+When user navigates to "Verbal Memory" module
+And user starts Verbal Memory Test
 
+Scenario: Complete Verbal Memory Test
+When user navigates to "Verbal Memory" module
+And user starts Verbal Memory Test
+Then user complete Verbal Memory Test
+
+Scenario: Start then fail Verbal Memory Test
+When user navigates to "Verbal Memory" module
+And user starts Verbal Memory Test
+Then user fail Verbal Memory Test
 
 Scenario: teardown
 And tear down

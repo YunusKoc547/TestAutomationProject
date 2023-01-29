@@ -26,17 +26,17 @@ Given user launched browser and navigated to url
 Scenario: Complete Sequence Memory Test
 Given user logged in with valid credentials
 When user navigates to home page
-When user navigates to Sequence Memory module
+When user navigates to "Sequence Memory" module
 And user starts Sequence Memory Test
 Then user complete Sequence Memory Test
 
 Scenario: Fail Sequence Memory Test and validate
-When user navigates to Sequence Memory module
+When user navigates to "Sequence Memory" module
 And user starts Sequence Memory Test
 Then user fail Sequence Memory Test
 
 Scenario: Complete Sequence Memory Test then click Try again button and validate
-When user navigates to Sequence Memory module
+When user navigates to "Sequence Memory" module
 And user starts Sequence Memory Test
 Then user fail Sequence Memory Test
 Then user click try again button

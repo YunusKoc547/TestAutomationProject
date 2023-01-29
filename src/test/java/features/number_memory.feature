@@ -26,13 +26,12 @@ Given user launched browser and navigated to url
 Scenario: Complete Number Memory Test
 Given user logged in with valid credentials
 When user navigates to home page
-When user navigates to Number Memory module
+When user navigates to "Number Memory" module
 And user starts Number Memory Test
 Then user completes Number Memory Test
 
 Scenario: Fail Number Memory Test and validate
-When user navigates to home page
-When user navigates to Number Memory module
+When user navigates to "Number Memory" module
 And user starts Number Memory Test
 Then user fails Number Memory Test
 

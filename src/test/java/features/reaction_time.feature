@@ -24,7 +24,7 @@ Background:
 Given user launched browser and navigated to url
 Given user logged in with valid credentials
 Given user navigates to home page
-When user navigates to Reaction Time module 
+When user navigates to "Reaction Time" module 
 
 Scenario: Complete Reaction Time Test
 When user starts Reaction Time Test

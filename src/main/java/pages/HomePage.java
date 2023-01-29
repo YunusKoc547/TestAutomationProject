@@ -30,7 +30,37 @@ public class HomePage extends AbstractPage{
 	// Number Memory module locators
 	By numberMemoryModule = By.xpath("//a//h3[text()='Number Memory']");
 	By numberMemoryModuleHeader = By.xpath("//h1[text()='Number Memory']");
+	
+	// Number Memory module locators
+	By verbalMemoryModule = By.xpath("//a//h3[text()='Verbal Memory']");
+	By verbalMemoryModuleHeader = By.xpath("//h1[text()='Verbal Memory Test']");
 			
+			
+	
+	public void navigateToModule(String module) throws IOException, InterruptedException {
+		
+		switch(module) {
+		case "Reaction Time":
+			genericMethods.clickElement(reactionTimeModule,"Reaction Time module",true);
+			genericMethods.isDisplayed(reactionTimeModuleHeader, "Reaction Time page header",true);
+			break;
+		case "Aim Trainer":
+			genericMethods.clickElement(aimTrainerModule, "Aim Trainer module", true);
+			genericMethods.isDisplayed(aimTrainerPageHeader, "Aim Trainer page", true);
+			break;
+		case "Sequence Memory":
+			genericMethods.clickElement(sequenceMemoryModule, "Sequence Memory module", true);
+			genericMethods.isDisplayed(sequenceMemoryPageHeader,"Sequence Memory Test",true);
+			break;
+		case "Number Memory":
+			genericMethods.clickElement(numberMemoryModule, "Number Memory module", true);
+			genericMethods.isDisplayed(numberMemoryModuleHeader,"Number Memory Test",true);
+			break;
+		case "Verbal Memory":
+			genericMethods.clickElement(verbalMemoryModule, "Verbal Memory module", true);
+			genericMethods.isDisplayed(verbalMemoryModuleHeader,"Verbal Memory Test",true);
+		}
+	}
 	
 	
 	public void navigateToReactionTimeModule() throws IOException, InterruptedException {

@@ -84,7 +84,7 @@ public class GenericMethods extends AbstractPage{
 		try {
 			DatabaseMethods.con.close();
 		}catch(Exception e) {
-			e.printStackTrace();
+//			e.printStackTrace();
 		}
 	}
 	
