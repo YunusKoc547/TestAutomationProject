@@ -82,12 +82,16 @@ When user navigates to "Verbal Memory" module
 And user starts Verbal Memory Test
 Then user fail Verbal Memory Test
 
+Scenario: Complete Chimp Test
+When user navigates to "Chimp Test" module
+And user starts Chimp Test
+And user completes Chimp Test
+
 Scenario: user logged out successfully
 And User logged out successfully
 
 Scenario: teardown
 Given tear down
-
 
 
 

@@ -34,6 +34,10 @@ public class HomePage extends AbstractPage{
 	// Number Memory module locators
 	By verbalMemoryModule = By.xpath("//a//h3[text()='Verbal Memory']");
 	By verbalMemoryModuleHeader = By.xpath("//h1[text()='Verbal Memory Test']");
+	
+	// Chimp Test module locators
+	By chimpTestModule = By.xpath("//a//h3[text()='Chimp Test']");
+	By chimpTestModuleHeader = By.xpath("//span[text()='Are You Smarter Than a Chimpanzee?']");
 			
 			
 	
@@ -59,6 +63,11 @@ public class HomePage extends AbstractPage{
 		case "Verbal Memory":
 			genericMethods.clickElement(verbalMemoryModule, "Verbal Memory module", true);
 			genericMethods.isDisplayed(verbalMemoryModuleHeader,"Verbal Memory Test",true);
+			break;
+		case "Chimp Test":
+			genericMethods.clickElement(chimpTestModule, "Chimp Test module", true);
+			genericMethods.isDisplayed(chimpTestModuleHeader, "Chimp Test page", true);
+			break;
 		}
 	}
 	

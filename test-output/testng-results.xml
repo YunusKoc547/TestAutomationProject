@@ -1,20 +1,164 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="15" passed="15" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-01-28T21:56:48 EST" name="Suite" finished-at="2023-01-28T21:57:02 EST" duration-ms="13476">
+  <suite started-at="2023-02-02T15:25:07 EST" name="Suite" finished-at="2023-02-02T15:27:37 EST" duration-ms="150035">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.CucumberRunnerVerbalMemory@27462a88]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.CucumberRunnerRegression@27462a88]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-01-28T21:56:48 EST" name="Cucumber Test" finished-at="2023-01-28T21:57:02 EST" duration-ms="13476">
-      <class name="runners.CucumberRunnerVerbalMemory">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:runners.CucumberRunnerVerbalMemory@27462a88]" started-at="2023-01-28T21:56:48 EST" name="setUpClass" finished-at="2023-01-28T21:56:49 EST" duration-ms="240" status="PASS">
+    <test started-at="2023-02-02T15:25:07 EST" name="Cucumber Test" finished-at="2023-02-02T15:27:37 EST" duration-ms="150035">
+      <class name="runners.CucumberRunnerRegression">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:runners.CucumberRunnerRegression@27462a88]" started-at="2023-02-02T15:25:07 EST" name="setUpClass" finished-at="2023-02-02T15:25:07 EST" duration-ms="274" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.CucumberRunnerVerbalMemory@27462a88]" started-at="2023-01-28T21:56:49 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-01-28T21:56:50 EST" duration-ms="1676" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.CucumberRunnerRegression@27462a88]" started-at="2023-02-02T15:25:07 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-02-02T15:25:09 EST" duration-ms="2579" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User Login with valid credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Regression Suite]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.CucumberRunnerRegression@27462a88]" started-at="2023-02-02T15:25:09 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-02-02T15:25:14 EST" duration-ms="4285" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Complete Reaction Time Test"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Regression Suite]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.CucumberRunnerRegression@27462a88]" started-at="2023-02-02T15:25:14 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-02-02T15:25:14 EST" duration-ms="268" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Start Reaction Time Test and Validate Clicked Too Soon message"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Regression Suite]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.CucumberRunnerRegression@27462a88]" started-at="2023-02-02T15:25:14 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-02-02T15:25:18 EST" duration-ms="4245" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Complete Aim Trainer test"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Regression Suite]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.CucumberRunnerRegression@27462a88]" started-at="2023-02-02T15:25:18 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-02-02T15:26:13 EST" duration-ms="54627" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Complete Sequence Memory Test"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Regression Suite]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.CucumberRunnerRegression@27462a88]" started-at="2023-02-02T15:26:13 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-02-02T15:26:15 EST" duration-ms="2408" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Fail Sequence Memory Test and validate"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Regression Suite]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.CucumberRunnerRegression@27462a88]" started-at="2023-02-02T15:26:15 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-02-02T15:26:18 EST" duration-ms="2308" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Fail Sequence Memory Test and click Try again button and validate"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Regression Suite]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.CucumberRunnerRegression@27462a88]" started-at="2023-02-02T15:26:18 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-02-02T15:27:04 EST" duration-ms="46248" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Complete Number Memory Test"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Regression Suite]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.CucumberRunnerRegression@27462a88]" started-at="2023-02-02T15:27:04 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-02-02T15:27:06 EST" duration-ms="2154" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Fail Number Memory Test and validate"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Regression Suite]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.CucumberRunnerRegression@27462a88]" started-at="2023-02-02T15:27:06 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-02-02T15:27:06 EST" duration-ms="342" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,14 +167,14 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA["Optional[Verbal Memory]"]]>
+                <![CDATA["Optional[Regression Suite]"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.CucumberRunnerVerbalMemory@27462a88]" started-at="2023-01-28T21:56:50 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-01-28T21:56:55 EST" duration-ms="4748" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.CucumberRunnerRegression@27462a88]" started-at="2023-02-02T15:27:06 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-02-02T15:27:11 EST" duration-ms="4892" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -39,14 +183,14 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA["Optional[Verbal Memory]"]]>
+                <![CDATA["Optional[Regression Suite]"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.CucumberRunnerVerbalMemory@27462a88]" started-at="2023-01-28T21:56:55 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-01-28T21:57:01 EST" duration-ms="6442" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.CucumberRunnerRegression@27462a88]" started-at="2023-02-02T15:27:11 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-02-02T15:27:12 EST" duration-ms="435" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -55,14 +199,46 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA["Optional[Verbal Memory]"]]>
+                <![CDATA["Optional[Regression Suite]"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.CucumberRunnerVerbalMemory@27462a88]" started-at="2023-01-28T21:57:01 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-01-28T21:57:02 EST" duration-ms="342" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.CucumberRunnerRegression@27462a88]" started-at="2023-02-02T15:27:12 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-02-02T15:27:19 EST" duration-ms="7671" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Complete Chimp Test"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Regression Suite]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.CucumberRunnerRegression@27462a88]" started-at="2023-02-02T15:27:19 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-02-02T15:27:20 EST" duration-ms="704" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["user logged out successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Regression Suite]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.CucumberRunnerRegression@27462a88]" started-at="2023-02-02T15:27:20 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-02-02T15:27:37 EST" duration-ms="16556" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -71,18 +247,18 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA["Optional[Verbal Memory]"]]>
+                <![CDATA["Optional[Regression Suite]"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.CucumberRunnerVerbalMemory@27462a88]" started-at="2023-01-28T21:57:02 EST" name="tearDownClass" finished-at="2023-01-28T21:57:02 EST" duration-ms="5" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.CucumberRunnerRegression@27462a88]" started-at="2023-02-02T15:27:37 EST" name="tearDownClass" finished-at="2023-02-02T15:27:37 EST" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- runners.CucumberRunnerVerbalMemory -->
+      </class> <!-- runners.CucumberRunnerRegression -->
     </test> <!-- Cucumber Test -->
   </suite> <!-- Suite -->
 </testng-results>
