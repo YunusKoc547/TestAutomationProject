@@ -58,11 +58,7 @@ public class SequenceMemoryPage extends AbstractPage{
 						if(index == currentLevel) break;					
 					}
 				}	
-				
-				System.out.println("Level: " + currentLevel);
-				System.out.println("index: " + index);
-			
-				System.out.println("List for test " + test + ": " + listInt);
+
 				wait.until(ExpectedConditions.elementToBeClickable(squares));
 				Thread.sleep(1000); // SQUARES ARE CLICKABLE BEFORE CLICKS CAN BE REGISTERED, WAIT IS REQUIRED
 				while(count < listInt.size()) {
