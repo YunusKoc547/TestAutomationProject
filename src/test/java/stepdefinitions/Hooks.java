@@ -1,20 +1,10 @@
 package stepdefinitions;
 
-import java.sql.SQLException;
-import java.time.LocalDateTime;
-
-import java.time.format.DateTimeFormatter;
-
-import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.GherkinKeyword;
-import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 import commonUtilities.AbstractPage;
-import commonUtilities.GenericMethods;
-import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
-import net.bytebuddy.implementation.bind.annotation.Super;
 
 
 //import cucumber.api.java.After;

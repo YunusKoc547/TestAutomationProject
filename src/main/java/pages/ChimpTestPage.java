@@ -22,7 +22,7 @@ public class ChimpTestPage extends AbstractPage{
 	public void completeChimpTest() throws IOException, InterruptedException {
 				
 		int level = 0;
-		while (level < 20) {
+		while (level < 10000) {
 		int size = driver.findElements(allNumberTiles).size();
 		
 		System.out.println("size = " + size);

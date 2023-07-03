@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\yunus\git\HumanBenchMarkAutomation\testSuites\RegressionTests.xml</span>
+                    <span>C:\Users\yunus\git\HumanBenchMarkAutomation\testSuites\AimTrainerTests.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">15 methods,   15 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="runners.CucumberRunnerAimTrainer" class="method navigator-link" hash-for-method="runScenario(&quot;Complete Aim Trainer test&quot;, &quot;Optional[Aim Trainer]&quot;)">runScenario("Complete Aim Trainer test", "Optional[Aim Trainer]")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,77 +118,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="runners.CucumberRunnerRegression" class="method navigator-link" hash-for-method="runScenario(&quot;Start Reaction Time Test and Validate Clicked Too Soon message&quot;, &quot;Optional[Regression Suite]&quot;)">runScenario("Start Reaction Time Test and Validate Clicked Too Soon message", "Optional[Regression Suite]")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="runners.CucumberRunnerRegression" class="method navigator-link" hash-for-method="runScenario(&quot;Complete Chimp Test&quot;, &quot;Optional[Regression Suite]&quot;)">runScenario("Complete Chimp Test", "Optional[Regression Suite]")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="runners.CucumberRunnerRegression" class="method navigator-link" hash-for-method="runScenario(&quot;Fail Sequence Memory Test and click Try again button and validate&quot;, &quot;Optional[Regression Suite]&quot;)">runScenario("Fail Sequence Memory Test and click Try again button and validate", "Optional[Regression Suite]")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="runners.CucumberRunnerRegression" class="method navigator-link" hash-for-method="runScenario(&quot;user logged out successfully&quot;, &quot;Optional[Regression Suite]&quot;)">runScenario("user logged out successfully", "Optional[Regression Suite]")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="runners.CucumberRunnerRegression" class="method navigator-link" hash-for-method="runScenario(&quot;Complete Reaction Time Test&quot;, &quot;Optional[Regression Suite]&quot;)">runScenario("Complete Reaction Time Test", "Optional[Regression Suite]")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="runners.CucumberRunnerRegression" class="method navigator-link" hash-for-method="runScenario(&quot;Fail Sequence Memory Test and validate&quot;, &quot;Optional[Regression Suite]&quot;)">runScenario("Fail Sequence Memory Test and validate", "Optional[Regression Suite]")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="runners.CucumberRunnerRegression" class="method navigator-link" hash-for-method="runScenario(&quot;Complete Verbal Memory Test&quot;, &quot;Optional[Regression Suite]&quot;)">runScenario("Complete Verbal Memory Test", "Optional[Regression Suite]")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="runners.CucumberRunnerRegression" class="method navigator-link" hash-for-method="runScenario(&quot;Complete Aim Trainer test&quot;, &quot;Optional[Regression Suite]&quot;)">runScenario("Complete Aim Trainer test", "Optional[Regression Suite]")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="runners.CucumberRunnerRegression" class="method navigator-link" hash-for-method="runScenario(&quot;Fail Number Memory Test and validate&quot;, &quot;Optional[Regression Suite]&quot;)">runScenario("Fail Number Memory Test and validate", "Optional[Regression Suite]")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="runners.CucumberRunnerRegression" class="method navigator-link" hash-for-method="runScenario(&quot;User Login with valid credentials&quot;, &quot;Optional[Regression Suite]&quot;)">runScenario("User Login with valid credentials", "Optional[Regression Suite]")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="runners.CucumberRunnerRegression" class="method navigator-link" hash-for-method="runScenario(&quot;Complete Number Memory Test&quot;, &quot;Optional[Regression Suite]&quot;)">runScenario("Complete Number Memory Test", "Optional[Regression Suite]")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="runners.CucumberRunnerRegression" class="method navigator-link" hash-for-method="runScenario(&quot;Start Verbal Memory Test&quot;, &quot;Optional[Regression Suite]&quot;)">runScenario("Start Verbal Memory Test", "Optional[Regression Suite]")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="runners.CucumberRunnerRegression" class="method navigator-link" hash-for-method="runScenario(&quot;Start then fail Verbal Memory Test&quot;, &quot;Optional[Regression Suite]&quot;)">runScenario("Start then fail Verbal Memory Test", "Optional[Regression Suite]")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="runners.CucumberRunnerRegression" class="method navigator-link" hash-for-method="runScenario(&quot;Complete Sequence Memory Test&quot;, &quot;Optional[Regression Suite]&quot;)">runScenario("Complete Sequence Memory Test", "Optional[Regression Suite]")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="runners.CucumberRunnerRegression" class="method navigator-link" hash-for-method="runScenario(&quot;teardown&quot;, &quot;Optional[Regression Suite]&quot;)">runScenario("teardown", "Optional[Regression Suite]")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="runners.CucumberRunnerAimTrainer" class="method navigator-link" hash-for-method="runScenario(&quot;teardown&quot;, &quot;Optional[Aim Trainer]&quot;)">runScenario("teardown", "Optional[Aim Trainer]")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -189,158 +133,44 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">runners.CucumberRunnerRegression</span>
+              <img src="failed.png"/>
+              <span class="class-name">runners.CucumberRunnerAimTrainer</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Start Reaction Time Test and Validate Clicked Too Soon message&quot;, &quot;Optional[Regression Suite]&quot;)">
-                  </a> <!-- runScenario("Start Reaction Time Test and Validate Clicked Too Soon message", "Optional[Regression Suite]") -->
+                  <a name="runScenario(&quot;Complete Aim Trainer test&quot;, &quot;Optional[Aim Trainer]&quot;)">
+                  </a> <!-- runScenario("Complete Aim Trainer test", "Optional[Aim Trainer]") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Start Reaction Time Test and Validate Clicked Too Soon message", "Optional[Regression Suite]")</span>
+                  <span class="parameters">("Complete Aim Trainer test", "Optional[Aim Trainer]")</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at commonUtilities.Screenshot.logFail(Screenshot.java:40)
+	at commonUtilities.GenericMethods.clickElement(GenericMethods.java:40)
+	at pages.HomePage.navigateToHomePage(HomePage.java:81)
+	at stepdefinitions.Home_Stepdef.userNavigateToHomePage(Home_Stepdef.java:36)
+	at ✽.user navigates to home page(file:///C:/Users/yunus/git/HumanBenchMarkAutomation/src/test/java/features/aim_trainer.feature:28)
+... Removed 4 stack frames
+</div> <!-- stack-trace -->
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">runners.CucumberRunnerAimTrainer</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Complete Chimp Test&quot;, &quot;Optional[Regression Suite]&quot;)">
-                  </a> <!-- runScenario("Complete Chimp Test", "Optional[Regression Suite]") -->
+                  <a name="runScenario(&quot;teardown&quot;, &quot;Optional[Aim Trainer]&quot;)">
+                  </a> <!-- runScenario("teardown", "Optional[Aim Trainer]") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Complete Chimp Test", "Optional[Regression Suite]")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;Fail Sequence Memory Test and click Try again button and validate&quot;, &quot;Optional[Regression Suite]&quot;)">
-                  </a> <!-- runScenario("Fail Sequence Memory Test and click Try again button and validate", "Optional[Regression Suite]") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Fail Sequence Memory Test and click Try again button and validate", "Optional[Regression Suite]")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;user logged out successfully&quot;, &quot;Optional[Regression Suite]&quot;)">
-                  </a> <!-- runScenario("user logged out successfully", "Optional[Regression Suite]") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("user logged out successfully", "Optional[Regression Suite]")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;Complete Reaction Time Test&quot;, &quot;Optional[Regression Suite]&quot;)">
-                  </a> <!-- runScenario("Complete Reaction Time Test", "Optional[Regression Suite]") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Complete Reaction Time Test", "Optional[Regression Suite]")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;Fail Sequence Memory Test and validate&quot;, &quot;Optional[Regression Suite]&quot;)">
-                  </a> <!-- runScenario("Fail Sequence Memory Test and validate", "Optional[Regression Suite]") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Fail Sequence Memory Test and validate", "Optional[Regression Suite]")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;Complete Verbal Memory Test&quot;, &quot;Optional[Regression Suite]&quot;)">
-                  </a> <!-- runScenario("Complete Verbal Memory Test", "Optional[Regression Suite]") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Complete Verbal Memory Test", "Optional[Regression Suite]")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;Complete Aim Trainer test&quot;, &quot;Optional[Regression Suite]&quot;)">
-                  </a> <!-- runScenario("Complete Aim Trainer test", "Optional[Regression Suite]") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Complete Aim Trainer test", "Optional[Regression Suite]")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;Fail Number Memory Test and validate&quot;, &quot;Optional[Regression Suite]&quot;)">
-                  </a> <!-- runScenario("Fail Number Memory Test and validate", "Optional[Regression Suite]") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Fail Number Memory Test and validate", "Optional[Regression Suite]")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;User Login with valid credentials&quot;, &quot;Optional[Regression Suite]&quot;)">
-                  </a> <!-- runScenario("User Login with valid credentials", "Optional[Regression Suite]") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("User Login with valid credentials", "Optional[Regression Suite]")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;Complete Number Memory Test&quot;, &quot;Optional[Regression Suite]&quot;)">
-                  </a> <!-- runScenario("Complete Number Memory Test", "Optional[Regression Suite]") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Complete Number Memory Test", "Optional[Regression Suite]")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;Start Verbal Memory Test&quot;, &quot;Optional[Regression Suite]&quot;)">
-                  </a> <!-- runScenario("Start Verbal Memory Test", "Optional[Regression Suite]") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Start Verbal Memory Test", "Optional[Regression Suite]")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;Start then fail Verbal Memory Test&quot;, &quot;Optional[Regression Suite]&quot;)">
-                  </a> <!-- runScenario("Start then fail Verbal Memory Test", "Optional[Regression Suite]") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Start then fail Verbal Memory Test", "Optional[Regression Suite]")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;Complete Sequence Memory Test&quot;, &quot;Optional[Regression Suite]&quot;)">
-                  </a> <!-- runScenario("Complete Sequence Memory Test", "Optional[Regression Suite]") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Complete Sequence Memory Test", "Optional[Regression Suite]")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;teardown&quot;, &quot;Optional[Regression Suite]&quot;)">
-                  </a> <!-- runScenario("teardown", "Optional[Regression Suite]") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("teardown", "Optional[Regression Suite]")</span>
+                  <span class="parameters">("teardown", "Optional[Aim Trainer]")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -350,7 +180,7 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\yunus\git\HumanBenchMarkAutomation\testSuites\RegressionTests.xml</span>
+            <span class="header-content">C:\Users\yunus\git\HumanBenchMarkAutomation\testSuites\AimTrainerTests.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -359,7 +189,7 @@
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Cucumber Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;runners.CucumberRunnerRegression&quot;/&gt;
+      &lt;class name=&quot;runners.CucumberRunnerAimTrainer&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Cucumber Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -407,72 +237,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(15);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
-data.setCell(0, 2, 'runners.CucumberRunnerRegression')
-data.setCell(0, 3, 54627);
+data.setCell(0, 2, 'runners.CucumberRunnerAimTrainer')
+data.setCell(0, 3, 20607);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
-data.setCell(1, 2, 'runners.CucumberRunnerRegression')
-data.setCell(1, 3, 46248);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'runScenario')
-data.setCell(2, 2, 'runners.CucumberRunnerRegression')
-data.setCell(2, 3, 16556);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'runScenario')
-data.setCell(3, 2, 'runners.CucumberRunnerRegression')
-data.setCell(3, 3, 7671);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'runScenario')
-data.setCell(4, 2, 'runners.CucumberRunnerRegression')
-data.setCell(4, 3, 4892);
-data.setCell(5, 0, 5)
-data.setCell(5, 1, 'runScenario')
-data.setCell(5, 2, 'runners.CucumberRunnerRegression')
-data.setCell(5, 3, 4285);
-data.setCell(6, 0, 6)
-data.setCell(6, 1, 'runScenario')
-data.setCell(6, 2, 'runners.CucumberRunnerRegression')
-data.setCell(6, 3, 4245);
-data.setCell(7, 0, 7)
-data.setCell(7, 1, 'runScenario')
-data.setCell(7, 2, 'runners.CucumberRunnerRegression')
-data.setCell(7, 3, 2579);
-data.setCell(8, 0, 8)
-data.setCell(8, 1, 'runScenario')
-data.setCell(8, 2, 'runners.CucumberRunnerRegression')
-data.setCell(8, 3, 2408);
-data.setCell(9, 0, 9)
-data.setCell(9, 1, 'runScenario')
-data.setCell(9, 2, 'runners.CucumberRunnerRegression')
-data.setCell(9, 3, 2308);
-data.setCell(10, 0, 10)
-data.setCell(10, 1, 'runScenario')
-data.setCell(10, 2, 'runners.CucumberRunnerRegression')
-data.setCell(10, 3, 2154);
-data.setCell(11, 0, 11)
-data.setCell(11, 1, 'runScenario')
-data.setCell(11, 2, 'runners.CucumberRunnerRegression')
-data.setCell(11, 3, 704);
-data.setCell(12, 0, 12)
-data.setCell(12, 1, 'runScenario')
-data.setCell(12, 2, 'runners.CucumberRunnerRegression')
-data.setCell(12, 3, 435);
-data.setCell(13, 0, 13)
-data.setCell(13, 1, 'runScenario')
-data.setCell(13, 2, 'runners.CucumberRunnerRegression')
-data.setCell(13, 3, 342);
-data.setCell(14, 0, 14)
-data.setCell(14, 1, 'runScenario')
-data.setCell(14, 2, 'runners.CucumberRunnerRegression')
-data.setCell(14, 3, 268);
+data.setCell(1, 2, 'runners.CucumberRunnerAimTrainer')
+data.setCell(1, 3, 3966);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 24 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -498,74 +276,24 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">runners.CucumberRunnerRegression</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">runners.CucumberRunnerAimTrainer</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUpClass</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">runScenario("User Login with valid credentials", "Optional[Regression Suite]")</span>
-                <span class="method-start">283 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Complete Aim Trainer test", "Optional[Aim Trainer]")</span>
+                <span class="method-start">258 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">runScenario("Complete Reaction Time Test", "Optional[Regression Suite]")</span>
-                <span class="method-start">2864 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">runScenario("Start Reaction Time Test and Validate Clicked Too Soon message", "Optional[Regression Suite]")</span>
-                <span class="method-start">7150 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">runScenario("Complete Aim Trainer test", "Optional[Regression Suite]")</span>
-                <span class="method-start">7419 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">runScenario("Complete Sequence Memory Test", "Optional[Regression Suite]")</span>
-                <span class="method-start">11665 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">runScenario("Fail Sequence Memory Test and validate", "Optional[Regression Suite]")</span>
-                <span class="method-start">66293 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">runScenario("Fail Sequence Memory Test and click Try again button and validate", "Optional[Regression Suite]")</span>
-                <span class="method-start">68701 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">runScenario("Complete Number Memory Test", "Optional[Regression Suite]")</span>
-                <span class="method-start">71010 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">runScenario("Fail Number Memory Test and validate", "Optional[Regression Suite]")</span>
-                <span class="method-start">117259 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">runScenario("Start Verbal Memory Test", "Optional[Regression Suite]")</span>
-                <span class="method-start">119413 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">runScenario("Complete Verbal Memory Test", "Optional[Regression Suite]")</span>
-                <span class="method-start">119756 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">runScenario("Start then fail Verbal Memory Test", "Optional[Regression Suite]")</span>
-                <span class="method-start">124649 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">runScenario("Complete Chimp Test", "Optional[Regression Suite]")</span>
-                <span class="method-start">125084 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">runScenario("user logged out successfully", "Optional[Regression Suite]")</span>
-                <span class="method-start">132756 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">runScenario("teardown", "Optional[Regression Suite]")</span>
-                <span class="method-start">133461 ms</span>
+                <span class="method-name">runScenario("teardown", "Optional[Aim Trainer]")</span>
+                <span class="method-start">4226 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">150019 ms</span>
+                <span class="method-start">24834 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

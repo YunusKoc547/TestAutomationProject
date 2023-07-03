@@ -24,6 +24,7 @@ public class SequenceMemoryPage extends AbstractPage{
 	By levelLocator = By.xpath("//span[@class='css-dd6wi1']//span[2]");
 	By tryAgainButton = By.xpath("//button[text()='Try again']");
 	By postGameText = By.xpath("//p[text()='Save your score to see how you compare.']");
+	By squareRows = By.xpath("//div[@class='square-row']");
 	
 	WebDriverWait wait = new WebDriverWait(driver, 10);
 	
@@ -43,7 +44,7 @@ public class SequenceMemoryPage extends AbstractPage{
 			
 			int index = 0;
 			int count = 0;
-			int levelNumber = 10;
+			int levelNumber = 40;
 			for (int j = 0; j < levelNumber; j++) {
 					
 				wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(activeSquares));		
@@ -58,18 +59,23 @@ public class SequenceMemoryPage extends AbstractPage{
 						if(index == currentLevel) break;					
 					}
 				}	
+				index = 0;
+				System.out.println(listInt.size());
+				currentLevel = Integer.parseInt(driver.findElement(levelLocator).getText()) + 1;
 
 				wait.until(ExpectedConditions.elementToBeClickable(squares));
 				Thread.sleep(1000); // SQUARES ARE CLICKABLE BEFORE CLICKS CAN BE REGISTERED, WAIT IS REQUIRED
 				while(count < listInt.size()) {
-					Thread.sleep(50);
+//					Thread.sleep(50);
 					driver.findElements(squares).get(listInt.get(count)).click();
 					count++;
+					
 				}
 				count = 0;
-				index = 0;
+				
 				listInt.clear();
-				currentLevel = Integer.parseInt(driver.findElement(levelLocator).getText());
+				
+				
 			}	
 			feature.pass("Completed Sequence Memory Test to level "+(levelNumber+1)+" Successfully");
 		}catch(Exception e) {

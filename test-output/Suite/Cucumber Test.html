@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Cucumber Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>15/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Feb 02 15:25:07 EST 2023</td>
+<td>Started on:</td><td>Mon Jul 03 12:24:49 EDT 2023</td>
 </tr>
-<tr><td>Total time:</td><td>150 seconds (150035 ms)</td>
+<tr><td>Total time:</td><td>24 seconds (24852 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,36 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='runners.CucumberRunnerAimTrainer.runScenario()'><b>runScenario</b><br>Test class: runners.CucumberRunnerAimTrainer<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Complete Aim Trainer test", "Optional[Aim Trainer]"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at commonUtilities.Screenshot.logFail(Screenshot.java:40)
+	at commonUtilities.GenericMethods.clickElement(GenericMethods.java:40)
+	at pages.HomePage.navigateToHomePage(HomePage.java:81)
+	at stepdefinitions.Home_Stepdef.userNavigateToHomePage(Home_Stepdef.java:36)
+	at ?.user navigates to home page(file:///C:/Users/yunus/git/HumanBenchMarkAutomation/src/test/java/features/aim_trainer.feature:28)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1551760389", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1551760389'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at commonUtilities.Screenshot.logFail(Screenshot.java:40)
+	at commonUtilities.GenericMethods.clickElement(GenericMethods.java:40)
+	at pages.HomePage.navigateToHomePage(HomePage.java:81)
+	at stepdefinitions.Home_Stepdef.userNavigateToHomePage(Home_Stepdef.java:36)
+	at ?.user navigates to home page(file:///C:/Users/yunus/git/HumanBenchMarkAutomation/src/test/java/features/aim_trainer.feature:28)
+</pre></div></td>
+<td>3</td>
+<td>runners.CucumberRunnerAimTrainer@27462a88</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,80 +105,10 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runners.CucumberRunnerRegression.runScenario()'><b>runScenario</b><br>Test class: runners.CucumberRunnerRegression<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Start Reaction Time Test and Validate Clicked Too Soon message", "Optional[Regression Suite]"</td>
+<td title='runners.CucumberRunnerAimTrainer.runScenario()'><b>runScenario</b><br>Test class: runners.CucumberRunnerAimTrainer<br>Test method: Runs Cucumber Scenarios<br>Parameters: "teardown", "Optional[Aim Trainer]"</td>
 <td></td>
-<td>0</td>
-<td>runners.CucumberRunnerRegression@27462a88</td></tr>
-<tr>
-<td title='runners.CucumberRunnerRegression.runScenario()'><b>runScenario</b><br>Test class: runners.CucumberRunnerRegression<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Complete Chimp Test", "Optional[Regression Suite]"</td>
-<td></td>
-<td>7</td>
-<td>runners.CucumberRunnerRegression@27462a88</td></tr>
-<tr>
-<td title='runners.CucumberRunnerRegression.runScenario()'><b>runScenario</b><br>Test class: runners.CucumberRunnerRegression<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Fail Sequence Memory Test and click Try again button and validate", "Optional[Regression Suite]"</td>
-<td></td>
-<td>2</td>
-<td>runners.CucumberRunnerRegression@27462a88</td></tr>
-<tr>
-<td title='runners.CucumberRunnerRegression.runScenario()'><b>runScenario</b><br>Test class: runners.CucumberRunnerRegression<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user logged out successfully", "Optional[Regression Suite]"</td>
-<td></td>
-<td>0</td>
-<td>runners.CucumberRunnerRegression@27462a88</td></tr>
-<tr>
-<td title='runners.CucumberRunnerRegression.runScenario()'><b>runScenario</b><br>Test class: runners.CucumberRunnerRegression<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Complete Reaction Time Test", "Optional[Regression Suite]"</td>
-<td></td>
-<td>4</td>
-<td>runners.CucumberRunnerRegression@27462a88</td></tr>
-<tr>
-<td title='runners.CucumberRunnerRegression.runScenario()'><b>runScenario</b><br>Test class: runners.CucumberRunnerRegression<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Fail Sequence Memory Test and validate", "Optional[Regression Suite]"</td>
-<td></td>
-<td>2</td>
-<td>runners.CucumberRunnerRegression@27462a88</td></tr>
-<tr>
-<td title='runners.CucumberRunnerRegression.runScenario()'><b>runScenario</b><br>Test class: runners.CucumberRunnerRegression<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Complete Verbal Memory Test", "Optional[Regression Suite]"</td>
-<td></td>
-<td>4</td>
-<td>runners.CucumberRunnerRegression@27462a88</td></tr>
-<tr>
-<td title='runners.CucumberRunnerRegression.runScenario()'><b>runScenario</b><br>Test class: runners.CucumberRunnerRegression<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Complete Aim Trainer test", "Optional[Regression Suite]"</td>
-<td></td>
-<td>4</td>
-<td>runners.CucumberRunnerRegression@27462a88</td></tr>
-<tr>
-<td title='runners.CucumberRunnerRegression.runScenario()'><b>runScenario</b><br>Test class: runners.CucumberRunnerRegression<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Fail Number Memory Test and validate", "Optional[Regression Suite]"</td>
-<td></td>
-<td>2</td>
-<td>runners.CucumberRunnerRegression@27462a88</td></tr>
-<tr>
-<td title='runners.CucumberRunnerRegression.runScenario()'><b>runScenario</b><br>Test class: runners.CucumberRunnerRegression<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User Login with valid credentials", "Optional[Regression Suite]"</td>
-<td></td>
-<td>2</td>
-<td>runners.CucumberRunnerRegression@27462a88</td></tr>
-<tr>
-<td title='runners.CucumberRunnerRegression.runScenario()'><b>runScenario</b><br>Test class: runners.CucumberRunnerRegression<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Complete Number Memory Test", "Optional[Regression Suite]"</td>
-<td></td>
-<td>46</td>
-<td>runners.CucumberRunnerRegression@27462a88</td></tr>
-<tr>
-<td title='runners.CucumberRunnerRegression.runScenario()'><b>runScenario</b><br>Test class: runners.CucumberRunnerRegression<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Start Verbal Memory Test", "Optional[Regression Suite]"</td>
-<td></td>
-<td>0</td>
-<td>runners.CucumberRunnerRegression@27462a88</td></tr>
-<tr>
-<td title='runners.CucumberRunnerRegression.runScenario()'><b>runScenario</b><br>Test class: runners.CucumberRunnerRegression<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Start then fail Verbal Memory Test", "Optional[Regression Suite]"</td>
-<td></td>
-<td>0</td>
-<td>runners.CucumberRunnerRegression@27462a88</td></tr>
-<tr>
-<td title='runners.CucumberRunnerRegression.runScenario()'><b>runScenario</b><br>Test class: runners.CucumberRunnerRegression<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Complete Sequence Memory Test", "Optional[Regression Suite]"</td>
-<td></td>
-<td>54</td>
-<td>runners.CucumberRunnerRegression@27462a88</td></tr>
-<tr>
-<td title='runners.CucumberRunnerRegression.runScenario()'><b>runScenario</b><br>Test class: runners.CucumberRunnerRegression<br>Test method: Runs Cucumber Scenarios<br>Parameters: "teardown", "Optional[Regression Suite]"</td>
-<td></td>
-<td>16</td>
-<td>runners.CucumberRunnerRegression@27462a88</td></tr>
+<td>20</td>
+<td>runners.CucumberRunnerAimTrainer@27462a88</td></tr>
 </table><p>
 </body>
 </html>

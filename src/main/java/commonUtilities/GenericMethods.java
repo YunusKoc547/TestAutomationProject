@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -32,8 +33,8 @@ public class GenericMethods extends AbstractPage{
 			driver.findElement(locator).click();
 			feature.pass("Click Element: " + log);
 		}catch(Exception e) {
-			Screenshot.logFail("ERROR: Could not click: " + log,true,flag);
-		}	
+			Screenshot.logFail("ERROR: Could not click: " + locator,true,flag);
+		}		
 	}
 	
 	public void clickElement(WebElement locator, String log, boolean flag) throws IOException, InterruptedException {
@@ -42,7 +43,7 @@ public class GenericMethods extends AbstractPage{
 			locator.click();
 			feature.pass("Click Element: " + log);
 		}catch(Exception e) {
-			Screenshot.logFail("ERROR: Could not click: " + log,true,flag);
+			Screenshot.logFail("ERROR: Could not click: " + locator,true,flag);
 		}	
 	}
 	
@@ -61,7 +62,7 @@ public class GenericMethods extends AbstractPage{
 			driver.get(locator);
 			feature.pass("Navigated to: " + log);
 		}catch(Exception e) {
-			Screenshot.logFail("ERROR: Could not navigate to: " + log,true,flag);
+			Screenshot.logFail("ERROR: Could not navigate to: " + locator,true,flag);
 		}
 	}
 	
@@ -97,7 +98,7 @@ public class GenericMethods extends AbstractPage{
 			driver.findElement(locator).isDisplayed();
 			feature.pass("Element is visible: " + log);
 		}catch(Exception e) {
-			Screenshot.logFail("Element NOT Visible: " + log,true,flag);
+			Screenshot.logFail("Element NOT Visible: " + locator,true,flag);
 		}
 	}
 	
@@ -121,7 +122,7 @@ public class GenericMethods extends AbstractPage{
 			driver.findElement(locator).sendKeys(keys);
 			feature.pass("Entered \"" + keys + "\" into " + field + " Successfully");
 		}catch(Exception e) {
-			Screenshot.logFail("ERROR: Could not enter \"" + keys + "\" into " + field,true,flag);
+			Screenshot.logFail("ERROR: Could not enter \"" + keys + "\" into " + locator,true,flag);
 		}
 	}
 	
@@ -143,7 +144,7 @@ public class GenericMethods extends AbstractPage{
 			}
 		}catch(Exception e) {
 			if(isPassword == false) {
-				Screenshot.logFail("ERROR: Could not enter \"" + keys + "\" into " + field,true,flag);
+				Screenshot.logFail("ERROR: Could not enter \"" + keys + "\" into " + locator,true,flag);
 			}else {
 				Screenshot.logFail("ERROR: password not entered successfully",true,flag);
 
@@ -161,7 +162,7 @@ public class GenericMethods extends AbstractPage{
 			Thread.sleep(2000);
 			feature.pass("Successfully scrolled " + field + " into view");
 		}catch(Exception e) {
-			Screenshot.logFail("ERROR: Could not scroll " + field + " into view", true, true);
+			Screenshot.logFail("ERROR: Could not scroll " + locator + " into view", true, true);
 		}
 	}
 	
