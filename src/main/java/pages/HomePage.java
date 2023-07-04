@@ -38,6 +38,10 @@ public class HomePage extends AbstractPage{
 	// Chimp Test module locators
 	By chimpTestModule = By.xpath("//a//h3[text()='Chimp Test']");
 	By chimpTestModuleHeader = By.xpath("//span[text()='Are You Smarter Than a Chimpanzee?']");
+	
+	// Typing Test module locators
+	By typingTestModule = By.xpath("//h3[text()='Typing']");
+	By typingTestModuleHeader = By.xpath("//h1[text()='Typing Test']");
 			
 			
 	
@@ -67,6 +71,10 @@ public class HomePage extends AbstractPage{
 		case "Chimp Test":
 			genericMethods.clickElement(chimpTestModule, "Chimp Test module", true);
 			genericMethods.isDisplayed(chimpTestModuleHeader, "Chimp Test page", true);
+			break;
+		case "Typing Test":
+			genericMethods.clickElement(typingTestModule, "Typing Test module" ,false);
+			genericMethods.isDisplayed(typingTestModuleHeader, "Typing Test page", true);
 			break;
 		}
 	}

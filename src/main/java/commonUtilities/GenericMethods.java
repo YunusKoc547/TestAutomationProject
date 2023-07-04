@@ -175,6 +175,15 @@ public class GenericMethods extends AbstractPage{
 		}
 	}
 	
+	public String getText(WebElement locator) throws IOException, InterruptedException {
+		try {
+			return locator.getText();
+		}catch(Exception e) {
+			Screenshot.logFail("ERROR: could not get text from: " + locator, true, true);
+			return null;
+		}
+	}
+	
 //	public <T> List<T> getList(By locator) {
 //		
 //		List<T> list = new ArrayList<T>();
