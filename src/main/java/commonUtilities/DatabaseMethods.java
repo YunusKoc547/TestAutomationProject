@@ -31,7 +31,7 @@ public class DatabaseMethods extends AbstractPage{
 	public static void databaseConnection() throws SQLException, ClassNotFoundException {
 		
 		// Create Connection
-		con = DriverManager.getConnection("jdbc:mysql://localhost:3306/users","root","root");
+		con = DriverManager.getConnection(connection string);
 		
 		System.out.println("hi");
 		// Create statement
